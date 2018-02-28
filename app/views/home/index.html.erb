@@ -12,12 +12,8 @@
     <li><%= link_to product.title, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %></li>
   <% end %>
 </ul>
-<ul>
-  <% @collections.each do |theme| %>
-    <li><%= theme.title %></li>
-  <% end %>
-</ul>
-
+<h2>Options du thème</h2>
+{@shop_session.url}
 <hr>
 
 <h2>Webhooks</h2>
