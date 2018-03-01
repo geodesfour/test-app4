@@ -2,9 +2,7 @@
   <script type="text/javascript">
     ShopifyApp.ready(function(){
       ShopifyApp.Bar.initialize({ title: "Home" });
-    });
-    var theme = GET /admin/themes.json;
-    console.log(theme);
+    });  
   </script>
 <% end %>
 <h2>Produits</h2>
@@ -17,8 +15,8 @@
 
 <h2>Liste des commandes</h2>
 <ul>
-  <% @orders.each do |order| %>
-    <li><%= order.id %></li>
+  <% @themes.each do |theme| %>
+    <li><%= theme.id %></li>
   <% end %>
 </ul>
 
