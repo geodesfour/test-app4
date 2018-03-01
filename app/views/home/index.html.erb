@@ -3,16 +3,8 @@
     ShopifyApp.ready(function(){
       ShopifyApp.Bar.initialize({ title: "Home" });
     });
-    asset = ShopifyAPI::Asset.find('layout/theme.liquid') # 1.
-  # Grab a cache of the pre-installed layout
-  self.theme_layout = asset.value # 2.
-  snippet = DripSnippet.new(self.drip_account)
-  if asset.value.match(/#{snippet.start_wrapper}/i) # 3.
-    asset.value.sub!(/#{snippet.start_wrapper}.*#{snippet.end_wrapper}/im, snippet.snippet) # 4.
-  else
-    asset.value.sub!(/<\/body>/, "#{snippet.snippet}</body>") # 5.
-  end
-  return asset.save # 6.
+    var theme = GET /admin/themes.json;
+    console.log(theme);
   </script>
 <% end %>
 <h2>Products</h2>
@@ -25,6 +17,8 @@
 <h2>Options du thème</h2>
 ShopifyApp.flashNotice("Unicorn was created successfully.");
 <hr>
+
+{shop}
 
 <h2>Webhooks</h2>
 
