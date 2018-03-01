@@ -7,20 +7,22 @@
     console.log(theme);
   </script>
 <% end %>
-<h2>Products</h2>
+<h2>Produits</h2>
 
 <ul>
   <% @products.each do |product| %>
     <li><%= link_to product.title, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %></li>
   <% end %>
 </ul>
-<h2>Options du thème</h2>
-ShopifyApp.flashNotice("Unicorn was created successfully.");
-<hr>
 
-{shop}
+<h2>Liste des commandes</h2>
+<ul>
+  <% @orders.each do |order| %>
+    <li><%= order.id %></li>
+  <% end %>
+</ul>
 
-<h2>Webhooks</h2>
+<h2>Webhooks à tester</h2>
 
 <% if @webhooks.present? %>
   <ul>
