@@ -3,6 +3,14 @@
     ShopifyApp.ready(function(){
       ShopifyApp.Bar.initialize({ title: "Home" });
     });  
+    getJSON('/admin/themes.json',
+function(err, data) {
+  if (err !== null) {
+    alert('Something went wrong: ' + err);
+  } else {
+    alert('Your query count: ' + data.query.count);
+  }
+});
   </script>
 <% end %>
 <h2>Produits</h2>
