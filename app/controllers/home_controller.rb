@@ -3,6 +3,6 @@ class HomeController < ShopifyApp::AuthenticatedController
     @products = ShopifyAPI::Product.find(:all, params: { limit: 10 })
     @webhooks = ShopifyAPI::Webhook.find(:all)   
     @shop = ShopifyAPI::Shop.current
-    @theme = ShopifyAPI::Theme.current
+    @theme = ShopifyAPI::Theme.find(:all) 
   end
 end
