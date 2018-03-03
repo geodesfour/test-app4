@@ -2,14 +2,7 @@
   <script type="text/javascript">
     ShopifyApp.ready(function(){
       ShopifyApp.Bar.initialize({ title: "Home" });
-    });  
-    getJSON('/admin/themes.json',
-function(err, data) {
-  if (err !== null) {
-    alert('Something went wrong: ' + err);
-  } else {
-    alert('Your query count: ' + data.query.count);
-  }
+    });     
 });
   </script>
 <% end %>
@@ -21,7 +14,11 @@ function(err, data) {
   <% end %>
 </ul>
 
-<?php echo 'toto'; ?>
+<? 
+
+echo 'toto'; 
+
+?>
 
 <h2>Informations du shop</h2>
 <%= debug @shop %>
