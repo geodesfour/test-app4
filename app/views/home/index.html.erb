@@ -14,21 +14,7 @@
 </ul>
 
 <h2>Liste des commandes à venir</h2>
-<?php
- $asset = $shopify('PUT /admin/themes/' . $id . '/assets.json', array(), array
-    (
-        'asset' => array
-        (
-            "key" => "snippets/file.liquid",
-            "src" => "https://yourdomain.com/file.liquid"
-        )
-    ));
-  foreach ( $themes as $theme){
-                if($theme[role] == 'main'){
-                    $id = $theme[id];
-                }
-            }
-?>
+<%= debug @shop %>
 
 <h2>Webhooks à tester</h2>
 
