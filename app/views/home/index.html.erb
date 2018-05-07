@@ -215,7 +215,22 @@ ul.tabs:after {
   </div> 
   <div  class="tab-int" id="tab-6">
     <h2>Support - Assistance</h2>
-    <p>Texte ...</p>
+    <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  page_id="303126313521096"
+  logged_in_greeting="Bonjour puis-je vous aider?"
+  logged_out_greeting="Bonjour puis-je vous aider?">
+</div>
   </div> 
   <div  class="tab-int" id="tab-7">
     <h2>Apps conseillées</h2>
