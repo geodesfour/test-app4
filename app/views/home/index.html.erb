@@ -137,9 +137,9 @@ ul.tabs:after {
     <li><a href="#tab-8">Liste des mises à jour</a></li>   
   </ul>
   <div class="tab-int" id="tab-1">
-    <h3>Guide d'installation</h3>
+    <h2>Guide d'installation</h2>
     <div class="entry-content">
-      <h2 class="doc-title">Installation</h2>
+     
 <h3>Installation et paramétrage de la page d’accueil – version VIDEO</h3>
 <p><video controls="controls" width="100%" height="100%" src="//geoffrey-desfour.com/videos/video-speedfly-1.mp4"></video></p>
 <h3>Installation et paramétrage de la page d’accueil – version TEXTE</h3>
@@ -184,52 +184,45 @@ ul.tabs:after {
 <h2 class="doc-title"><i class="fa fa-cog"></i> Paramétrage de la page produit</h2>
 <p><video style="display:none;" controls="controls" width="100%" height="100%" src="//geoffrey-desfour.com/videos/video-speedfly-2.mp4"></video><br>
 <iframe width="1040px" height="630px" src="https://www.youtube.com/embed/VYb50uEh-ho" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe></p>
-<h2 class="doc-title"><i class="fa fa-gift"></i> Trucs et astuces</h2>
-<p><a class="btn btn-primary" href="http://geoffrey-desfour.com/ressources-pour-le-theme-speedfly/">Accès à la page de ressources</a><br>
-<a class="btn btn-primary" href="https://www.youtube.com/channel/UCVDbkjDwykhbYe9Xp8zrJ9A/videos/">Accès à toutes les vidéos Speedfly</a><br>
-<a class="btn btn-primary" href="http://geoffrey-desfour.com/la-meilleure-formation-sur-le-dropshipping-en-2018/">Accès aux formations sur le Dropshipping</a><br>
-<a class="btn btn-primary" href="https://geoffrey-desfour.com/category/shopify/">Accès aux tutoriels Gratuits</a><br>
-<a class="btn btn-primary" target="_blank" href="http://bit.ly/banque-n26-business">La banque idéale pour votre E-commerce</a></p>
-
         </div>            
       
                             
           
   </div>
   <div  class="tab-int" id="tab-2">
-    <h3>Ressources</h3>
+    <h2>Ressources</h2>
     <p>Texte ...</p>
   </div>
   <div  class="tab-int" id="tab-3">
-    <h3>Codes utiles</h3>
+    <h2>Codes utiles</h2>
     <p>Texte ...</p>
   </div> 
   <div  class="tab-int" id="tab-4">
-    <h3>Liens utiles</h3>
+    <h2>Liens utiles</h2>
     <p>Texte ...</p>
   </div> 
   <div  class="tab-int" id="tab-5">
-    <h3>Outils pratiques</h3>
-    <h4>Liens rapides vers vos produits</h4>
+    <h2>Outils pratiques</h2>
+    <h3>Liens rapides vers vos produits</h3>
     <ul>
     <% @products.each do |product| %>
       <li><%= link_to product.title, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %></li>
     <% end %>
     </ul>
-    <h4>Informations sur la boutique</h4>
+    <h3>Informations sur la boutique</h3>
     <%= debug @shop %>
 
   </div> 
   <div  class="tab-int" id="tab-6">
-    <h3>Support - Assistance</h3>
+    <h2>Support - Assistance</h2>
     <p>Texte ...</p>
   </div> 
   <div  class="tab-int" id="tab-7">
-    <h3>Apps conseillées</h3>
+    <h2>Apps conseillées</h2>
     <p>Texte ...</p>
   </div> 
   <div  class="tab-int" id="tab-8">
-    <h3>Liste des mises à jour</h3>
+    <h2>Liste des mises à jour</h2>
     <p>Texte ...</p>
   </div> 
 </div>
