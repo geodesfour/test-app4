@@ -160,35 +160,30 @@ ul.tabs:after {
   display:inline;
   color:#333 !important;
 }
+#password { border:1px solid #ddd; width:150px; padding:10px 15px; }
 </style>
 <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="//code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
 <script>$(document).ready(function(){$("ul.tabs").each(function(){var t,i,a=$(this).find("a");t=a.first().addClass("active"),i=$(t.attr("href")),a.not(":first").each(function(){$($(this).attr("href")).hide()}),$(this).find("a").click(function(a){return t.removeClass("active"),i.hide(),t=$(this),i=$($(this).attr("href")),t.addClass("active"),i.show(),!1})})});</script>
 
 
-<form id="myform">
+<div id="myform">
 <label for="password">Password</label>
-<input id="password" name="password" />
+<div id="password"></div>
 <br/>
-<input type="submit" value="Validate!">
-</form>
+<div class="btn-1" id="validForm">OK</div>
+</div>
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 <script>
+$( "#validForm" ).on( "click", function() {
+  console.log( $( this ).text() );
+
 // just for the demos, avoids form submit
-jQuery.validator.setDefaults({
-  debug: true,
-  success: "valid"
-});
-$( "#myform" ).validate({
-  rules: {
-    password: "required",
-    password: {
-      equalTo: "123"
-    }
-  }
+if ($('#password').text == "123" ) {
   console.log('toto');
+}
 });
 </script>
 
