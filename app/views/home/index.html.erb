@@ -12,6 +12,12 @@ body {
   font-family:arial;
   font-size:14px;
 }
+.app-speedfly pre {
+  color:#f0f0f0;
+  border-radius:10px;
+  padding:15px 15px;
+  background:#000;
+}
 #my-tab ul.tabs li a.active,
 #my-tab ul.tabs li:last-child a {
     border-top-right-radius: 2px
@@ -125,6 +131,8 @@ ul.tabs:after {
 <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="//code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
 <script>$(document).ready(function(){$("ul.tabs").each(function(){var t,i,a=$(this).find("a");t=a.first().addClass("active"),i=$(t.attr("href")),a.not(":first").each(function(){$($(this).attr("href")).hide()}),$(this).find("a").click(function(a){return t.removeClass("active"),i.hide(),t=$(this),i=$($(this).attr("href")),t.addClass("active"),i.show(),!1})})});</script>
+
+<div class="app-speedfly">
 <div id="my-tab" class="my-tab">
   <ul class="tabs">
     <li><a href="#tab-1">Guide d'installation</a></li>
@@ -518,3 +526,5 @@ We are passionate and we do everything possible to make you discover our items&n
 </div>
 
 <div class="app-footer"><a href="https://www.speedfly-theme.eu/" target="_blank">Copyright &copy; speedfly-theme 2017. tous droits réservés</a></div>
+
+</div>
