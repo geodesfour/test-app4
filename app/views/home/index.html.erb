@@ -113,12 +113,13 @@ ul.tabs:after {
     }
 }
 .app-footer {
-  padding:15px 0;
+  padding:25px 0;
   text-align: center
 }
 .app-footer a {
-  font-size:13px;
+  font-size:12px;
   display:inline;
+  color:#333;
 }
 </style>
 <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
@@ -126,7 +127,7 @@ ul.tabs:after {
 <script>$(document).ready(function(){$("ul.tabs").each(function(){var t,i,a=$(this).find("a");t=a.first().addClass("active"),i=$(t.attr("href")),a.not(":first").each(function(){$($(this).attr("href")).hide()}),$(this).find("a").click(function(a){return t.removeClass("active"),i.hide(),t=$(this),i=$($(this).attr("href")),t.addClass("active"),i.show(),!1})})});</script>
 <div id="my-tab" class="my-tab">
   <ul class="tabs">
-    <li><a href="#tab-1">Informations</a></li>
+    <li><a href="#tab-1">Guide d'installation</a></li>
     <li><a href="#tab-2">Ressources</a> </li>
     <li><a href="#tab-3">Codes utiles</a></li> 
     <li><a href="#tab-4">Liens utiles</a></li> 
@@ -136,8 +137,64 @@ ul.tabs:after {
     <li><a href="#tab-8">Liste des mises à jour</a></li>   
   </ul>
   <div class="tab-int" id="tab-1">
-    <h3>Informations</h3>
-    <p>Texte ...</p>
+    <h3>Guide d'installation</h3>
+    <div class="entry-content">
+      <h2 class="doc-title">Installation</h2>
+<h3>Installation et paramétrage de la page d’accueil – version VIDEO</h3>
+<p><video controls="controls" width="100%" height="100%" src="//geoffrey-desfour.com/videos/video-speedfly-1.mp4"></video></p>
+<h3>Installation et paramétrage de la page d’accueil – version TEXTE</h3>
+<p>Rendez vous dans <strong>online store</strong> -&gt;Trouvez la zone <strong>More themes</strong> et cliquez sur le bouton <strong>Upload themes</strong></p>
+<p>Choisissez le thème <strong>speedfly</strong> que vous avez reçu et cliquez sur le bouton <strong>Upload</strong></p>
+<p>Recherchez dans les thèmes proposés le <strong>Speedfly -&gt;&nbsp;</strong>cliquez sur le lien <strong>Actions</strong> et cliquez sur <strong>Publish</strong> pour le publier.</p>
+<p>Ensuite mettez votre Shopify en Français en cliquant sur le bouton <strong>Actions&nbsp;</strong>-&gt; <strong>Edit language</strong> -&gt; cliquez sur «&nbsp;Change theme language&nbsp;» et choisissez French et cliquez sur le bouton <strong>Save</strong></p>
+<h2 class="doc-title"><i class="fa fa-cog"></i> Paramétrage du thème</h2>
+<p>Rendez vous dans&nbsp;<strong>online store</strong>&nbsp;-&gt; cliquez sur le bouton Customize</p>
+<p>Cliquez tout d’abord sur <strong>General settings</strong> afin de modifier les paramètres génériques du thème</p>
+<p>Vous trouverez ici une panoplie d’options que nous ne détaillerons pas ici, elles parlent d’elles mêmes!</p>
+<p>La section qui nous intéresse est la 1 le Choix du thème</p>
+<p>C’est ici que vous allez choisir le thème que vous voulez parmi les 3 ci-dessous:</p>
+<h3>Version 1: Classique</h3>
+<p>Version 1 Classique&nbsp;est un thème multi-produit complet avec une structure simple et efficace en un conteneur fixe de 1170px de large maximum</p>
+<p>Il est idéal pour une boutique avec beaucoup de produits car il est léger et minimaliste</p>
+<h3>Version 2: Deluxe</h3>
+<p>Version 2 Deluxe est un thème multi-produit complet avec une structure modulaire alternant zone de conteneurs et zone pleine page offrant un design tendance et professionnel</p>
+<p>Il est idéal pour une boutique moderne de niche avec de beaux visuels à mettre en valeur !</p>
+<h3>Version 3:&nbsp;Mono-produit</h3>
+<p>Version 3 est un thème mono-produit&nbsp;idéal pour tester un produit rapidement</p>
+<p>Il est optimisé pour automatiquement supprimer les zones superflues des autres versions afin de ne garder que l’essentiel !</p>
+<p>Très pratique si vous souhaitez un jour passer en multi produits en 1 clic !</p>
+<p>Vous pourrez trouver les ressources pour reproduire le modèle de la démo ici:</p>
+<p><a href="http://geoffrey-desfour.com/ressources-pour-le-theme-speedfly/" target="_blank">&nbsp;http://geoffrey-desfour.com/ressources-pour-le-theme-speedfly/</a></p>
+<h2 class="doc-title"><i class="fa fa-cog"></i> Paramétrage de la page d’accueil</h2>
+<p>Le thème est installé avec des zones d’exemple afin de vous faciliter la tâche et de vous simplifier sa compréhension</p>
+<p>Rendez vous dans&nbsp;<strong>online store</strong>&nbsp;-&gt; cliquez sur le bouton Customize</p>
+<p>La page d’accueil se gère via l’onglet <strong>Sections</strong></p>
+<p><strong>Liste des zones disponibles:</strong></p>
+<ul>
+<li>Une zone header pour gérer la partie haute du site</li>
+<li>Un listing de collections</li>
+<li>Un listing de produits jusqu’à 99 éléments !</li>
+<li>Un carrousel d’image avec possibilité de mettre un titre, un texte et un lien</li>
+<li>Un produit mise en avant idéal pour la version mono produit</li>
+<li>Un système de témoignages</li>
+<li>La possibilité de mettre des vidéos</li>
+<li>La possibilité de mettre du code</li>
+<li>Une zone footer pour gérer la partie base du site</li>
+</ul>
+<h2 class="doc-title"><i class="fa fa-cog"></i> Paramétrage de la page produit</h2>
+<p><video style="display:none;" controls="controls" width="100%" height="100%" src="//geoffrey-desfour.com/videos/video-speedfly-2.mp4"></video><br>
+<iframe width="1040px" height="630px" src="https://www.youtube.com/embed/VYb50uEh-ho" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe></p>
+<h2 class="doc-title"><i class="fa fa-gift"></i> Trucs et astuces</h2>
+<p><a class="btn btn-primary" href="http://geoffrey-desfour.com/ressources-pour-le-theme-speedfly/">Accès à la page de ressources</a><br>
+<a class="btn btn-primary" href="https://www.youtube.com/channel/UCVDbkjDwykhbYe9Xp8zrJ9A/videos/">Accès à toutes les vidéos Speedfly</a><br>
+<a class="btn btn-primary" href="http://geoffrey-desfour.com/la-meilleure-formation-sur-le-dropshipping-en-2018/">Accès aux formations sur le Dropshipping</a><br>
+<a class="btn btn-primary" href="https://geoffrey-desfour.com/category/shopify/">Accès aux tutoriels Gratuits</a><br>
+<a class="btn btn-primary" target="_blank" href="http://bit.ly/banque-n26-business">La banque idéale pour votre E-commerce</a></p>
+
+        </div>            
+      
+                            
+          
   </div>
   <div  class="tab-int" id="tab-2">
     <h3>Ressources</h3>
