@@ -530,13 +530,39 @@ We are passionate and we do everything possible to make you discover our items&n
       <li><%= link_to product.title, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %></li>
     <% end %>
     </ul>
+    <h3>Autres outils à venir...</h3>
+     <div style="display:none;">
     <h3>Informations sur la boutique</h3>
-    <%= debug @shop %>
+   <%= debug @shop %></div>
 
   </div> 
   <div  class="tab-int" id="tab-6">
     <h2>Support - Assistance</h2>
-    <p>A venir...</p>
+    <div class="col-lg-12 text-center">            
+            <div class="clearfix"></div>
+            <h2 class="section-heading">Quel est votre soucis ?</h2>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://staticxx.facebook.com/connect/xd_arbiter/r/2VRzCA39w_9.js?version=42#channel=f2c40c8341e3e18&amp;origin=https%3A%2F%2Fwww.speedfly-theme.eu" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div class="fb-customerchat fb_invisible_flow fb_iframe_widget" page_id="303126313521096" logged_in_greeting="Bonjour puis-je vous aider?" logged_out_greeting="Bonjour puis-je vous aider?" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;locale=fr_FR&amp;logged_in_greeting=Bonjour%20puis-je%20vous%20aider%3F&amp;logged_out_greeting=Bonjour%20puis-je%20vous%20aider%3F&amp;page_id=303126313521096&amp;sdk=joey"><span style="vertical-align: top; width: 0px; height: 0px; overflow: hidden;"><iframe name="f31c742f1b0ab14" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="" src="https://www.facebook.com/v2.12/plugins/customerchat.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2F2VRzCA39w_9.js%3Fversion%3D42%23cb%3Df1fc9cbe86c3b98%26domain%3Dwww.speedfly-theme.eu%26origin%3Dhttps%253A%252F%252Fwww.speedfly-theme.eu%252Ff2c40c8341e3e18%26relation%3Dparent.parent&amp;container_width=0&amp;locale=fr_FR&amp;logged_in_greeting=Bonjour%20puis-je%20vous%20aider%3F&amp;logged_out_greeting=Bonjour%20puis-je%20vous%20aider%3F&amp;page_id=303126313521096&amp;sdk=joey" style="border: none; visibility: visible; width: 0px; height: 0px;"></iframe></span></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+
+                       
+
+            <h4 style="font-size:21px;">Pour les questions génériques et liées au thème merci de poster vos questions sur le groupe dédié</h4>
+            <p class="lead"><a href="https://www.facebook.com/groups/speedflytheme/" class="btn btn-primary">Groupe Facebook Speedfly</a></p>
+            <h4 style="font-size:21px;">Pour les questions plus personelles ou spécifiques merci de poser votre question<br> dans la boité messenger en bas à droite</h4>
+           
+            <p>Merci, <br>l'équipe Speedfly</p>
+            <p class="lead" style="display:none;">Veuillez utiliser ce formulaire si votre demande est spécifique en détaillant votre problème le plus clairement possible</p>
+            </div>
   </div> 
   <div  class="tab-int" id="tab-7">
     <h2>Apps conseillées</h2>
