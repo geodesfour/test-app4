@@ -1,8 +1,7 @@
 class HomeController < ShopifyApp::AuthenticatedController
   def index
     @products = ShopifyAPI::Product.find(:all)
-    @webhooks = ShopifyAPI::Webhook.find(:all)  
-    @orders = ShopifyAPI::Order.find(:all, :params => {:limit => 99, :order => "created_at DESC" })
+    @webhooks = ShopifyAPI::Webhook.find(:all)     
     @shop = ShopifyAPI::Shop.current
     
   end
