@@ -6,5 +6,6 @@ class HomeController < ShopifyApp::AuthenticatedController
   end 
   def others    
     @customers = ShopifyAPI::Customer.find(:all)
+    @orders = ShopifyAPI::Order.find(:all)
   end 
 end
