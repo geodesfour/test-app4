@@ -1012,7 +1012,10 @@ Chaîne Youtube:  <a href="https://goo.gl/YYPka1" target="_blank" >Lien </a></p>
 <h2>Informations</h2>
 
 <%= debug @shop %>
-<%= debug @collections %>
+
+
+<% collections =  ShopifyAPI::CollectionListing.find(:all)  %>
+<%= collections %>
 <h2>Webhooks à tester</h2>     
   
 <% if @webhooks.present? %>
