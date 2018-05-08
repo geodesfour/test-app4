@@ -1009,19 +1009,11 @@ Chaîne Youtube:  <a href="https://goo.gl/YYPka1" target="_blank" >Lien </a></p>
 
 
 <div style="display:none;">
-<h2>Informations du thème</h2>
+<h2>Informations</h2>
 
 <%= debug @shop %>
-<% 
 
-@orders = ShopifyAPI::Order.find(:all) 
-
-
-%> 
-
-<%= debug @orders %> 
-<h2>Webhooks à tester</h2>
-     
+<h2>Webhooks à tester</h2>     
   
 <% if @webhooks.present? %>
   <ul>
