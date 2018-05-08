@@ -1006,8 +1006,18 @@ Chaîne Youtube:  <a href="https://goo.gl/YYPka1" target="_blank" >Lien </a></p>
 
 </div>
 </div>
-<div style="display:none;">
+
+
+<div style="display:block;">
 <h2>Informations du thème</h2>
+
+<% if @orders.present? %>
+  <ul>
+    <% @orders.each do |order| %>
+      <li><%= order.id %></li>
+    <% end %>
+  </ul>
+<% else %>
 
 <h2>Webhooks à tester</h2>
 
@@ -1018,6 +1028,8 @@ Chaîne Youtube:  <a href="https://goo.gl/YYPka1" target="_blank" >Lien </a></p>
     <% end %>
   </ul>
 <% else %>
+
+
   <p>This app has not created any webhooks for this Shop. Add webhooks to your ShopifyApp initializer if you need webhooks</p>
 <% end %>
 
