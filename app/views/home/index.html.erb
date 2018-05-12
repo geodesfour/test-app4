@@ -1,328 +1,341 @@
 <% content_for :javascript do %>
-  <script type="text/javascript">
-    ShopifyApp.ready(function(){
-      ShopifyApp.Bar.initialize({ title: "Home" });
-      console.log(ShopifyApp);
-    });     
-});
-  </script>
+<script type="text/javascript">
+   ShopifyApp.ready(function(){
+     ShopifyApp.Bar.initialize({ title: "Home" });
+     console.log(ShopifyApp);
+   });     
+   });
+</script>
 <% end %>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <style>
-body { 
-  font-family:arial;
-  font-size:14px;
-}
-.app-speedfly pre {
-  color:#f0f0f0;
-  border-radius:10px;
-  padding:15px 15px;
-  background:#000;
-}
-
-.app-speedfly a, .app-speedfly a:visited, .app-speedfly a:focus, .app-speedfly a:active {
-  color:#0060ff;
-  text-decoration:underline;
-}
-.app-speedfly .btn-1 {
-  background:#ff6600;
-  color:#fff !important;
-  text-decoration: none;
-  font-size:21px;
-  padding:10px 22px;
-  display:inline-block;
-  text-transform: uppercase;
-  margin:10px 0px;
-}
-.app-speedfly .btn-1:hover {
-  opacity:0.9;
-}
-span._4yxo {
-  font-size:15px;
-  display: block;
-  clear:both;
-  font-weight:normal;
-  margin:15px 0 5px 0;
-}
-.accordions-head {
-  padding:10px;
-  margin-bottom:1px;
-}
-.accordions-head:hover {
-  cursor:pointer;
-}
-#my-tab ul.tabs li a.active,
-#my-tab ul.tabs li:last-child a {
-    border-top-right-radius: 2px
-}
-
-#my-tab,
-#my-tab ul.tabs:after {
-    clear: both
-}
-
-#my-tab {
-    margin-top: 15px;
-    overflow: hidden;
-    display: block
-}
-
-#my-tab ul.tabs {
-    border-bottom: 1px solid #DDD;
-    display: block;
-    margin: 0;
-    padding: 0
-}
-
-#my-tab ul.tabs li {
-    display: block;
-    float: left;
-    height: auto;
-    margin-bottom: 0;
-    padding: 0;
-    width: auto
-}
-
-#my-tab ul.tabs li a {
-    -moz-border-bottom-colors: none;
-    -moz-border-image: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background: #F5F5F5;
-    border-color: #DDD!important;
-    border-style: solid;
-    border-width: 1px 1px 0 0;
-    display: block;
-    font-size: 14px;
-    height: auto;
-    line-height: 30px;
-    margin: 0;
-    padding: 5px 8px;
-    text-decoration: none;
-    width: auto;
-    font-weight: 300;
-    color: #303030;
-    border-bottom: none!important
-}
-
-#my-tab ul.tabs li a.active {
-    background: #fff;
-    border-left-width: 0;
-    border-top-left-radius: 2px;
-    color: #111;
-    height: auto
-}
-
-#my-tab ul.tabs li:first-child a.active {
-    margin-left: 0
-}
-
-#my-tab ul.tabs li:first-child a {
-    border-top-left-radius: 2px;
-    border-width: 1px 1px 0
-}
-
-#my-tab ul.tabs:before,
-ul.tabs:after {
-    content: " ";
-    display: block;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
-    width: 0
-}
-
-.tab-int {
-    border: 1px solid #e7e7e7;
-    border-top: 0;
-    padding: 15px 25px;
-    min-height: 215px
-}
-
-@media(max-width:600px) {
-    #my-tab ul.tabs li {
-        width: 100%;
-        float: none;
-        display: block
-    }
-    #my-tab ul.tabs,
-    #my-tab ul.tabs li {
-        height: auto
-    }
-}
-.ui-accordion .ui-accordion-content {
-  height:auto !important;
-}
-.ui-accordion .ui-accordion-header {
-  font-size:18px !important;
-  font-weight: bold !important;
-  padding: 15px 10px !important;
-  margin:7px 0 !important;
-}
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
-  border-color: #ff6600 !important;
-  background: #ff6600 !important;
-}
-  div.ui-accordion-content-active {
-
-  /*background: #f5f5f5;*/
-  }
-.app-footer {
-  padding:25px 0;
-  text-align: center
-}
-.app-footer a {
-  font-size:12px;
-  display:inline;
-  color:#333 !important;
-}
-#password { border:1px solid #ddd; width:150px; padding:10px 15px; }
+   body { 
+   font-family:arial;
+   font-size:14px;
+   }
+   .app-speedfly pre {
+   color:#f0f0f0;
+   border-radius:10px;
+   padding:15px 15px;
+   background:#000;
+   }
+   .app-speedfly a, .app-speedfly a:visited, .app-speedfly a:focus, .app-speedfly a:active {
+   color:#0060ff;
+   text-decoration:underline;
+   }
+   .app-speedfly .btn-1 {
+   background:#ff6600;
+   color:#fff !important;
+   text-decoration: none;
+   font-size:21px;
+   padding:10px 22px;
+   display:inline-block;
+   text-transform: uppercase;
+   margin:10px 0px;
+   }
+   .app-speedfly .btn-1:hover {
+   opacity:0.9;
+   }
+   span._4yxo {
+   font-size:15px;
+   display: block;
+   clear:both;
+   font-weight:normal;
+   margin:15px 0 5px 0;
+   }
+   .accordions-head {
+   padding:10px;
+   margin-bottom:1px;
+   }
+   .accordions-head:hover {
+   cursor:pointer;
+   }
+   #my-tab ul.tabs li a.active,
+   #my-tab ul.tabs li:last-child a {
+   border-top-right-radius: 2px
+   }
+   #my-tab,
+   #my-tab ul.tabs:after {
+   clear: both
+   }
+   #my-tab {
+   margin-top: 15px;
+   overflow: hidden;
+   display: block
+   }
+   #my-tab ul.tabs {
+   border-bottom: 1px solid #DDD;
+   display: block;
+   margin: 0;
+   padding: 0
+   }
+   #my-tab ul.tabs li {
+   display: block;
+   float: left;
+   height: auto;
+   margin-bottom: 0;
+   padding: 0;
+   width: auto
+   }
+   #my-tab ul.tabs li a {
+   -moz-border-bottom-colors: none;
+   -moz-border-image: none;
+   -moz-border-left-colors: none;
+   -moz-border-right-colors: none;
+   -moz-border-top-colors: none;
+   background: #F5F5F5;
+   border-color: #DDD!important;
+   border-style: solid;
+   border-width: 1px 1px 0 0;
+   display: block;
+   font-size: 14px;
+   height: auto;
+   line-height: 30px;
+   margin: 0;
+   padding: 5px 8px;
+   text-decoration: none;
+   width: auto;
+   font-weight: 300;
+   color: #303030;
+   border-bottom: none!important
+   }
+   #my-tab ul.tabs li a.active {
+   background: #fff;
+   border-left-width: 0;
+   border-top-left-radius: 2px;
+   color: #111;
+   height: auto
+   }
+   #my-tab ul.tabs li:first-child a.active {
+   margin-left: 0
+   }
+   #my-tab ul.tabs li:first-child a {
+   border-top-left-radius: 2px;
+   border-width: 1px 1px 0
+   }
+   #my-tab ul.tabs:before,
+   ul.tabs:after {
+   content: " ";
+   display: block;
+   height: 0;
+   overflow: hidden;
+   visibility: hidden;
+   width: 0
+   }
+   .tab-int {
+   border: 1px solid #e7e7e7;
+   border-top: 0;
+   padding: 15px 25px;
+   min-height: 215px
+   }
+   @media(max-width:600px) {
+   #my-tab ul.tabs li {
+   width: 100%;
+   float: none;
+   display: block
+   }
+   #my-tab ul.tabs,
+   #my-tab ul.tabs li {
+   height: auto
+   }
+   }
+   .ui-accordion .ui-accordion-content {
+   height:auto !important;
+   }
+   .ui-accordion .ui-accordion-header {
+   font-size:18px !important;
+   font-weight: bold !important;
+   padding: 15px 10px !important;
+   margin:7px 0 !important;
+   }
+   .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+   border-color: #ff6600 !important;
+   background: #ff6600 !important;
+   }
+   div.ui-accordion-content-active {
+   /*background: #f5f5f5;*/
+   }
+   .app-footer {
+   padding:25px 0;
+   text-align: center
+   }
+   .app-footer a {
+   font-size:12px;
+   display:inline;
+   color:#333 !important;
+   }
+   #password { border:1px solid #ddd; width:150px; padding:10px 15px; }
 </style>
 <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="//code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
 <script>$(document).ready(function(){$("ul.tabs").each(function(){var t,i,a=$(this).find("a");t=a.first().addClass("active"),i=$(t.attr("href")),a.not(":first").each(function(){$($(this).attr("href")).hide()}),$(this).find("a").click(function(a){return t.removeClass("active"),i.hide(),t=$(this),i=$($(this).attr("href")),t.addClass("active"),i.show(),!1})})});</script>
-
 <div class="app-speedfly">
-<div id="my-tab" class="my-tab">
-  <ul class="tabs">
-    <li><a href="#tab-1">Guide d'installation</a></li>
-    <li><a href="#tab-9">Guide d'utilisation</a></li>
-    <li><a href="#tab-2">Ressources</a> </li>
-    <li><a href="#tab-3">Codes utiles</a></li> 
-    <li><a href="#tab-4">Liens utiles</a></li> 
-    <li><a href="#tab-5">Outils pratiques</a></li> 
-    <li><a href="#tab-12">Hacks Dgeo</a></li>
-    <li><a href="#tab-8">Liste des mises à jour</a></li>    
-    <li><a href="#tab-7">Apps conseillées</a></li> 
-    <li><a href="#tab-11">FAQ</a></li>     
-    <li><a href="#tab-6">SAV</a></li>
-    <li><a href="#tab-10">Faire un don</a></li> 
-  </ul>
-  <div class="tab-int" id="tab-12">
-    <h2>Les Hacks de Dgeo</h2>
-    <p>Bientôt disponible</p>
-  </div>
-  <div class="tab-int" id="tab-1">
-    <h2>Guide d'installation</h2>
-    <div class="entry-content">
-     
-<h3>Installation et paramétrage de la page d’accueil – version VIDEO</h3>
-<p><video controls="controls" width="100%" height="100%" src="https://dgeodev.com/videos/video-speedfly-1.mp4"></video></p>
-<h3>Installation et paramétrage de la page d’accueil – version TEXTE</h3>
-<p>Rendez vous dans <strong>online store</strong> -&gt;Trouvez la zone <strong>More themes</strong> et cliquez sur le bouton <strong>Upload themes</strong></p>
-<p>Choisissez le thème <strong>speedfly</strong> que vous avez reçu et cliquez sur le bouton <strong>Upload</strong></p>
-<p>Recherchez dans les thèmes proposés le <strong>Speedfly -&gt;&nbsp;</strong>cliquez sur le lien <strong>Actions</strong> et cliquez sur <strong>Publish</strong> pour le publier.</p>
-<p>Ensuite mettez votre Shopify en Français en cliquant sur le bouton <strong>Actions&nbsp;</strong>-&gt; <strong>Edit language</strong> -&gt; cliquez sur «&nbsp;Change theme language&nbsp;» et choisissez French et cliquez sur le bouton <strong>Save</strong></p>
-<h2 class="doc-title"><i class="fa fa-cog"></i> Paramétrage du thème</h2>
-<p>Rendez vous dans&nbsp;<strong>online store</strong>&nbsp;-&gt; cliquez sur le bouton Customize</p>
-<p>Cliquez tout d’abord sur <strong>General settings</strong> afin de modifier les paramètres génériques du thème</p>
-<p>Vous trouverez ici une panoplie d’options que nous ne détaillerons pas ici, elles parlent d’elles mêmes!</p>
-<p>La section qui nous intéresse est la 1 le Choix du thème</p>
-<p>C’est ici que vous allez choisir le thème que vous voulez parmi les 3 ci-dessous:</p>
-<h3>Version 1: Classique</h3>
-<p>Version 1 Classique&nbsp;est un thème multi-produit complet avec une structure simple et efficace en un conteneur fixe de 1170px de large maximum</p>
-<p>Il est idéal pour une boutique avec beaucoup de produits car il est léger et minimaliste</p>
-<h3>Version 2: Deluxe</h3>
-<p>Version 2 Deluxe est un thème multi-produit complet avec une structure modulaire alternant zone de conteneurs et zone pleine page offrant un design tendance et professionnel</p>
-<p>Il est idéal pour une boutique moderne de niche avec de beaux visuels à mettre en valeur !</p>
-<h3>Version 3:&nbsp;Mono-produit</h3>
-<p>Version 3 est un thème mono-produit&nbsp;idéal pour tester un produit rapidement</p>
-<p>Il est optimisé pour automatiquement supprimer les zones superflues des autres versions afin de ne garder que l’essentiel !</p>
-<p>Très pratique si vous souhaitez un jour passer en multi produits en 1 clic !</p>
-<p>Vous pourrez trouver les ressources pour reproduire le modèle en cliquant sur l'onglet ressources:</p>
-
-<h2 class="doc-title"><i class="fa fa-cog"></i> Paramétrage de la page d’accueil</h2>
-<p>Le thème est installé avec des zones d’exemple afin de vous faciliter la tâche et de vous simplifier sa compréhension</p>
-<p>Rendez vous dans&nbsp;<strong>online store</strong>&nbsp;-&gt; cliquez sur le bouton Customize</p>
-<p>La page d’accueil se gère via l’onglet <strong>Sections</strong></p>
-<p><strong>Liste des zones disponibles:</strong></p>
-<ul>
-<li>Une zone header pour gérer la partie haute du site</li>
-<li>Un listing de collections</li>
-<li>Un listing de produits jusqu’à 99 éléments !</li>
-<li>Un carrousel d’image avec possibilité de mettre un titre, un texte et un lien</li>
-<li>Un produit mise en avant idéal pour la version mono produit</li>
-<li>Un système de témoignages</li>
-<li>La possibilité de mettre des vidéos</li>
-<li>La possibilité de mettre du code</li>
-<li>Une zone footer pour gérer la partie base du site</li>
-<li>Et plein d'autres sections que vous découvrirez !</li>
-</ul>
-<h2 class="doc-title"><i class="fa fa-cog"></i> Paramétrage de la page produit</h2>
-<p><video style="display:none;" controls="controls" width="100%" height="100%" src="https://dgeodev.com/videos/video-speedfly-2.mp4"></video><br>
-<iframe width="1040px" height="630px" src="https://www.youtube.com/embed/VYb50uEh-ho" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe></p>
-        </div>            
-      
-                            
-          
-  </div>
-  <div  class="tab-int" id="tab-2">
-    <h2>Ressources</h2>
-
-<div class="entry-content">
-      <p><strong>Vous trouverez ici les ressources pour utiliser au mieux le thème speedfly !</strong></p>
-<h2>Images et médias</h2>
-<h3>Images de sécurité et de confiance:</h3>
-<p>Clic droit -&gt; enregistrer l’image sous…</p>
-<p><img class="alignnone size-full wp-image-543" src="https://dgeodev.com/wp-content/uploads/2017/08/secure2.png" alt="secure2" width="480" height="122"></p>
-<p><img class="alignnone size-full wp-image-542" src="https://dgeodev.com/wp-content/uploads/2017/08/secure.jpg" alt="secure" width="466" height="96"></p>
-<p><img class="alignnone size-full wp-image-1072" src="https://dgeodev.com/wp-content/uploads/2017/09/paiement_securise_grande.png" alt="paiement_securise_grande" width="599" height="188"></p>
-<p><img class="alignnone size-full wp-image-1425" src="https://dgeodev.com/wp-content/uploads/2017/09/cart-img-secure.png" alt="cart-img-secure" width="289" height="38"></p>
-<p><img class="alignnone size-full wp-image-1426" src="https://dgeodev.com/wp-content/uploads/2017/09/cart-img-secure-red.png" alt="cart-img-secure-red" width="289" height="38"></p>
-<p><img class="alignnone size-full wp-image-1519" src="https://dgeodev.com/wp-content/uploads/2017/09/cart-img-secure4.png" alt="cart-img-secure4" width="350" height="56"></p>
-<p><img class="alignnone size-medium wp-image-1664" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-300x56.png" alt="unnamed" width="300" height="56"></p>
-<p><img class="alignnone size-medium wp-image-1663" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-300x50.jpg" alt="unnamed" width="300" height="50"></p>
-<p><img class="alignnone size-medium wp-image-1662" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-11-300x43.png" alt="unnamed (11)" width="300" height="43"></p>
-<p><img class="alignnone size-full wp-image-1074" src="https://dgeodev.com/wp-content/uploads/2017/09/secure3.png" alt="secure3" width="402" height="57"></p>
-<p><img class="alignnone size-medium wp-image-1661" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-10-300x135.png" alt="unnamed (10)" width="300" height="135"></p>
-<p><img class="alignnone size-medium wp-image-1660" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-9-300x135.png" alt="unnamed (9)" width="300" height="135"></p>
-<p><img class="alignnone size-medium wp-image-1659" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-8-300x162.png" alt="unnamed (8)" width="300" height="162"></p>
-<p><img class="alignnone size-medium wp-image-1658" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-7-300x87.png" alt="unnamed (7)" width="300" height="87"></p>
-<p><img class="alignnone size-full wp-image-918" src="https://dgeodev.com/wp-content/uploads/2017/09/badges-securite2_large_998ee3bd-3961-4e05-8266-3521f02fae6f_large.png" alt="badges-securite2_large_998ee3bd-3961-4e05-8266-3521f02fae6f_large" width="480" height="121"></p>
-<p><img class="alignnone size-full wp-image-1075" src="https://dgeodev.com/wp-content/uploads/2017/09/badge.png" alt="badge" width="480" height="121"></p>
-<p><img class="alignnone size-full wp-image-1521" src="https://dgeodev.com/wp-content/uploads/2017/09/badges-securite2_large3.png" alt="badges-securite2_large3" width="480" height="121"></p>
-<p><img class="alignnone size-medium wp-image-1648" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-1-300x103.jpg" alt="unnamed (1)" width="300" height="103"></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p><img class="alignnone size-full wp-image-1073" src="https://dgeodev.com/wp-content/uploads/2017/09/Satisfait_ou_rembourse.png" alt="Satisfait_ou_rembourse" width="425" height="243"></p>
-<p><img class="alignnone size-full wp-image-1651" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-2.png" alt="unnamed (2)" width="207" height="231"></p>
-<p><img class="alignnone size-medium wp-image-1652" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-3-300x240.jpg" alt="unnamed (3)" width="300" height="240"></p>
-<p><img class="alignnone size-medium wp-image-1653" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-3-300x237.png" alt="unnamed (3)" width="300" height="237"></p>
-<p><img class="alignnone size-full wp-image-1654" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-4.jpg" alt="unnamed (4)" width="300" height="300"></p>
-<p><img class="alignnone size-full wp-image-1655" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-4.png" alt="unnamed (4)" width="220" height="220"></p>
-<p><img class="alignnone size-medium wp-image-1656" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-5-300x300.png" alt="unnamed (5)" width="300" height="300"></p>
-<p><img class="alignnone size-medium wp-image-1657" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-6-300x300.png" alt="unnamed (6)" width="300" height="300"></p>
-<p><img class="alignnone size-medium wp-image-1650" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-2-300x185.jpg" alt="unnamed (2)" width="300" height="185"></p>
-<p><img class="alignnone size-medium wp-image-1649" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-1-300x203.png" alt="unnamed (1)" width="300" height="203"></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<h3>Images produits</h3>
-<p><img class="alignnone size-full wp-image-930" src="https://dgeodev.com/wp-content/uploads/2017/09/top10-png_large_1_large.png" alt="top10-png_large_1_large" width="480" height="242"></p>
-<p><img class="alignnone size-full wp-image-931" src="https://dgeodev.com/wp-content/uploads/2017/09/m250-logo-vu-a-la-tele-72dpi-1239140888_medium_160e6b01-1b4f-4019-8ba3-72c53e77fc2a_compact.jpg" alt="m250-logo-vu-a-la-tele-72dpi-1239140888_medium_160e6b01-1b4f-4019-8ba3-72c53e77fc2a_compact" width="160" height="131"></p>
-
-      
-                            
-          </div>
-                   
-      
-                            
-       
-  </div>
-  <div class="tab-int" id="tab-9">
-    <h2>Guide d'utilisation</h2>
-    <h3>Liste des vidéos</h3>
-    <div><h3 class="_2cuy _50a1 _2vxa">Comment mettre à jour Speedfly</h3><div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Mise à jour officielle</span></div><div class="_2cuy _3dgx _2vxa"><a href="https://www.youtube.com/watch?v=9SFgNAG7BF0" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy" data-lynx-uri="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D9SFgNAG7BF0&amp;h=ATMQpEO4Kf9AoBt_vTdn4OKubO9gPDPaF62so76VFimobXjfBICnEYxgqG-dmcoKIx1F2h3Gi6jkF5wevDTA4liao90j7x3rBynHodXOJ7ecy8UPdoo">https://www.youtube.com/watch?v=9SFgNAG7BF0</a></div><div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Mise à jour + traductions + fichiers de surcharges (attention sur certaines MAJ il ne faudra pas reprendre votre ancien fichier de traduction !)</span></div><div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D3MXtk9bwG0o%26t%3D75s&amp;h=ATNim7ES2RiHJhN1WQDjJTcCnxf45KO8ucDKGrW3QbmYsDvNFAlI6LSMAKfAT9g6p96PlI53iqZXJFwfBvliZIQDGFGI22d8hQ2avN_iV-MlF1e1rWk" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=3MXtk9bwG0o&amp;t=75s</a> </div><h3 class="_2cuy _50a1 _2vxa">Comment utiliser Speedfly</h3><div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Personnaliser son thème - Paramètres génériques </span></div><div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DzhbyYsYbXyI%26t%3D391s&amp;h=ATMh7OEeFO2R1eWiqmPsrHAXY9sUHD0lUNwfMlpYga4RcVtMrhwZyPBwA7hmgDdVI-xxD5bEK0gozy76BDJCvZht4PVujg7YDpbHRW9ThfzczZ8Sdng" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=zhbyYsYbXyI&amp;t=391s</a></div><div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Personnaliser sa page d'accueil avec Speedfly - Header et Footer</span></div><div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dcn3XU7AkwnI%26t%3D20s&amp;h=ATMVstpJh1teLWljiZOfvWNN0tItQAFQsQErsV841os1-GHX9n-WAW16r9waJuampOdXpPfyAu_KkZfC3eOq3lSp0EK9C3NdSQXwBXxT30pjdhK_OFU" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=cn3XU7AkwnI&amp;t=20s</a></div><div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Les sections dans Speedfly - Carrousel + Image et texte + Témoignages</span></div><div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DhO_j7c0hodw%26t%3D104s&amp;h=ATOuQZd3kCFDWrmdCyma2OyZeSy6lmnhb5tSLao59hYb2xz3euX8zeRRCLJebtmebNnPctfxWkolDlKwiRHyGXfhh3cciACyUBOI-bfSbpnFYT6xFN-4GshA-WA3gU74" target="_blank" rel="noopener nofollow" data-lynx-mode="async">https://www.youtube.com/watch?v=hO_j7c0hodw&amp;t=104s</a></div><div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Les sections dans Speedfly - Zone de texte + Zone Html + Vidéo</span></div><div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DTE7AbmO6dog%26t%3D32s&amp;h=ATP12opKKVOkG5brG2STotL8VP2VhW8n6Y5Mq7hZJz69Rg8hQbs-_2ZsKx3BinsdbMgI3SHa24EPeO0pHZCYt07j6eh169vkkxbpH5SgTs8fkjLerj4" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=TE7AbmO6dog&amp;t=32s</a></div><div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Les sections dans Speedfly - Liste des collections + Liste des produits</span></div><div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DlKtn06EBlpY%26t%3D163s&amp;h=ATOUuT9d1hLQPASh2FbLoJP7rZgFzQw7QbkJTIFyBgJh7tzImaOT7JQXNz8ZDJGCIGZUSyYDk2GjRefEyyhf67piJx2aULUecCQbnlvQlmc2h5excZI" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=lKtn06EBlpY&amp;t=163s</a></div><div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Les sections dans Speedfly - Mise en avant d'un produit</span></div><div class="_2cuy _3dgx _2vxa"> <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DC71X0EHu5fU%26t%3D36s&amp;h=ATO1uSOcon2VrF9LblrgxELE3lwVPw0swIIsee8gz31Zs-avCAnXMSG4Eetx2CCQXgWz6pL9Go9INg8NYQMbFvy99TrsYGZOjAwzIQPD_wyViYw2j313x9VptIHL9Vw_" target="_blank" rel="noopener nofollow" data-lynx-mode="async">https://www.youtube.com/watch?v=C71X0EHu5fU&amp;t=36s</a></div><div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Comment créer une boutique shopify originale avec Speedfly</span></div><div class="_2cuy _3dgx _2vxa"> <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DKxQJUBclSpQ%26t%3D71s&amp;h=ATN7EEslYusU1W8GvL3rmpP7GmgAhNJetqU9Ppf2iE6uV8mBeyXICK0N7fcEij2jwDccFUVmOH--n8I6aCQUCl0N-Bybqv1m8q-rKRCCa_uiGe7cRQQ" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=KxQJUBclSpQ&amp;t=71s</a></div><div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Comment faire une fiche produit sur Shopify avec Speedfly</span></div><div class="_2cuy _3dgx _2vxa"> <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DVYb50uEh-ho%26t%3D160s&amp;h=ATMRcisl7GzuUUA1ryqvm5S1ixizNbCMtV8A--Df6pk-yAt4K2o4R7HfQDn6eKxsaxiRMmOB0AjSSVFwNwSb5VMUtX2vvYM3bL4HYU0I5blBZqkfL2M" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=VYb50uEh-ho&amp;t=160s</a></div><div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Comment faire une boutique shopify mono produit en - de 25mn</span></div><div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DeoX3R_x0W_0&amp;h=ATNo84PbP3XMb3DTPhr2JxP9GzR2kbcefG814G_7_Q3hLtMC0KzkvaBx6Z-UG_oJsXgqRXujAM6QQO563A0rpcIVIhWRrZNDrF3Vhd1j60jbZJH1W5g" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=eoX3R_x0W_0</a></div><h3 class="_2cuy _50a1 _2vxa">Les mises à jour</h3><div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Speedfly 1.05 - Nouveautés de la Mise à jour de janvier 2018</span></div><div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DGnQxvdxpckg&amp;h=ATORTs1H_TgswJSsju6ZEMM-CDs4rfKsmsK7VCq0HYh8r0XSrduH-g8qbBoX6UomAqTOL9QDoaSZOPiKmW3C0J0wnDHpjLxhDcqbFTsL286J5Hpp_po" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=GnQxvdxpckg</a></div><div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Speedfly 1.06 - Nouveautés de la Mise à jour de février 2018</span></div><div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DBO_QK755yvo%26t%3D198s&amp;h=ATOEDiCyoVhvTUchu1wv9LPerTndpNTYmgNQH-md-eQO8iDNBMhr-_A41HEOfEsurhXkjx1peY0qNLrgMdk3g3uAGls5-v50EOo_KcunKPFq41df7jA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=BO_QK755yvo&amp;t=198s</a></div><div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Speedfly 1.07 - Nouveautés de la Mise à jour de mars 2018</span></div><div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DuZJC40o5T-k%26t%3D15s&amp;h=ATOy_glLAngXn4khL460zPIB9QnmsbPTdV27rDGAYLZNtzzxYlbps1HX51f60uw9Y0EJA19jCqe8asutu8mePAgO4wy3QR8O3AYBYLi0tJAs7yv2BsM" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=uZJC40o5T-k&amp;t=15s</a></div><div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Speedfly 1.08 - Nouveautés de la Mise à jour d’avril 2018</span></div><div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fyoutu.be%2FBnHSu4OTT9A&amp;h=ATOBctKSCq8IGoGQC7pMR3PL2tE1gokM_m4iM0TR5j4zi__I5ULf3w4Y3bBW2R-jH1eROGuEBAmZkFOiFL4oPPJVyno1B86D3Fgh9aEIQjvU-fgqVvdDoLB5yEcIliGA" target="_blank" rel="noopener nofollow" data-lynx-mode="async">https://youtu.be/BnHSu4OTT9A</a> </div><div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Speedfly 1.09 - Nouveautés de la Mise à jour de Mai 2018</span></div><div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DyLxii2fZDkU%26t%3D17s&amp;h=ATNUJve59hz1Z_EgKQixM9GdZT8R8M9OZNeX4IWCoLgGKBLiqjboLQgG2sWsjvx3tbK4dVWGhxet1RY3937r8IwK-hwfEBo7kqEc3A1lFGEe8pnsfzM" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=yLxii2fZDkU&amp;t=17s</a></div></div>
-  </div>
-  <div  class="tab-int" id="tab-3">
-    <h2>Codes utiles</h2>
-  
-<h3><strong>Afficher le simulateur fictif d’une promotion limitée dans le temps + stock disponible</strong></h3>
-<p>Ce code est à ajouter dans l’éditeur de la fiche produit&nbsp;que vous voulez !</p>
-<p>Attention ce code est utilisable uniquement si vous avez choisit de ne pas activer le Timer sur toutes les fiches dans les options du thème (product)</p>
-<pre>&lt;div id='showcdtimer' data-jours='0' data-heures='0' data-minutes='40'&gt;&lt;/div&gt;</pre>
-<h3>Code pour le tableau de codes promos</h3>
-<pre>&lt;table class="discount-table" width="100%"&gt;
+   <div id="my-tab" class="my-tab">
+      <ul class="tabs">
+         <li><a href="#tab-1">Guide d'installation</a></li>
+         <li><a href="#tab-9">Guide d'utilisation</a></li>
+         <li><a href="#tab-2">Ressources</a> </li>
+         <li><a href="#tab-3">Codes utiles</a></li>
+         <li><a href="#tab-4">Liens utiles</a></li>
+         <li><a href="#tab-5">Outils pratiques</a></li>
+         <li><a href="#tab-12">Hacks Dgeo</a></li>
+         <li><a href="#tab-8">Liste des mises à jour</a></li>
+         <li><a href="#tab-7">Apps conseillées</a></li>
+         <li><a href="#tab-11">FAQ</a></li>
+         <li><a href="#tab-6">SAV</a></li>
+         <li><a href="#tab-10">Faire un don</a></li>
+      </ul>
+      <div class="tab-int" id="tab-12">
+         <h2>Les Hacks de Dgeo</h2>
+         <p>Bientôt disponible</p>
+      </div>
+      <div class="tab-int" id="tab-1">
+         <h2>Guide d'installation</h2>
+         <div class="entry-content">
+            <h3>Installation et paramétrage de la page d’accueil – version VIDEO</h3>
+            <p>
+               <video controls="controls" width="100%" height="100%" src="https://dgeodev.com/videos/video-speedfly-1.mp4"></video>
+            </p>
+            <h3>Installation et paramétrage de la page d’accueil – version TEXTE</h3>
+            <p>Rendez vous dans <strong>online store</strong> -&gt;Trouvez la zone <strong>More themes</strong> et cliquez sur le bouton <strong>Upload themes</strong></p>
+            <p>Choisissez le thème <strong>speedfly</strong> que vous avez reçu et cliquez sur le bouton <strong>Upload</strong></p>
+            <p>Recherchez dans les thèmes proposés le <strong>Speedfly -&gt;&nbsp;</strong>cliquez sur le lien <strong>Actions</strong> et cliquez sur <strong>Publish</strong> pour le publier.</p>
+            <p>Ensuite mettez votre Shopify en Français en cliquant sur le bouton <strong>Actions&nbsp;</strong>-&gt; <strong>Edit language</strong> -&gt; cliquez sur «&nbsp;Change theme language&nbsp;» et choisissez French et cliquez sur le bouton <strong>Save</strong></p>
+            <h2 class="doc-title"><i class="fa fa-cog"></i> Paramétrage du thème</h2>
+            <p>Rendez vous dans&nbsp;<strong>online store</strong>&nbsp;-&gt; cliquez sur le bouton Customize</p>
+            <p>Cliquez tout d’abord sur <strong>General settings</strong> afin de modifier les paramètres génériques du thème</p>
+            <p>Vous trouverez ici une panoplie d’options que nous ne détaillerons pas ici, elles parlent d’elles mêmes!</p>
+            <p>La section qui nous intéresse est la 1 le Choix du thème</p>
+            <p>C’est ici que vous allez choisir le thème que vous voulez parmi les 3 ci-dessous:</p>
+            <h3>Version 1: Classique</h3>
+            <p>Version 1 Classique&nbsp;est un thème multi-produit complet avec une structure simple et efficace en un conteneur fixe de 1170px de large maximum</p>
+            <p>Il est idéal pour une boutique avec beaucoup de produits car il est léger et minimaliste</p>
+            <h3>Version 2: Deluxe</h3>
+            <p>Version 2 Deluxe est un thème multi-produit complet avec une structure modulaire alternant zone de conteneurs et zone pleine page offrant un design tendance et professionnel</p>
+            <p>Il est idéal pour une boutique moderne de niche avec de beaux visuels à mettre en valeur !</p>
+            <h3>Version 3:&nbsp;Mono-produit</h3>
+            <p>Version 3 est un thème mono-produit&nbsp;idéal pour tester un produit rapidement</p>
+            <p>Il est optimisé pour automatiquement supprimer les zones superflues des autres versions afin de ne garder que l’essentiel !</p>
+            <p>Très pratique si vous souhaitez un jour passer en multi produits en 1 clic !</p>
+            <p>Vous pourrez trouver les ressources pour reproduire le modèle en cliquant sur l'onglet ressources:</p>
+            <h2 class="doc-title"><i class="fa fa-cog"></i> Paramétrage de la page d’accueil</h2>
+            <p>Le thème est installé avec des zones d’exemple afin de vous faciliter la tâche et de vous simplifier sa compréhension</p>
+            <p>Rendez vous dans&nbsp;<strong>online store</strong>&nbsp;-&gt; cliquez sur le bouton Customize</p>
+            <p>La page d’accueil se gère via l’onglet <strong>Sections</strong></p>
+            <p><strong>Liste des zones disponibles:</strong></p>
+            <ul>
+               <li>Une zone header pour gérer la partie haute du site</li>
+               <li>Un listing de collections</li>
+               <li>Un listing de produits jusqu’à 99 éléments !</li>
+               <li>Un carrousel d’image avec possibilité de mettre un titre, un texte et un lien</li>
+               <li>Un produit mise en avant idéal pour la version mono produit</li>
+               <li>Un système de témoignages</li>
+               <li>La possibilité de mettre des vidéos</li>
+               <li>La possibilité de mettre du code</li>
+               <li>Une zone footer pour gérer la partie base du site</li>
+               <li>Et plein d'autres sections que vous découvrirez !</li>
+            </ul>
+            <h2 class="doc-title"><i class="fa fa-cog"></i> Paramétrage de la page produit</h2>
+            <p>
+               <video style="display:none;" controls="controls" width="100%" height="100%" src="https://dgeodev.com/videos/video-speedfly-2.mp4"></video>
+               <br>
+               <iframe width="1040px" height="630px" src="https://www.youtube.com/embed/VYb50uEh-ho" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+            </p>
+         </div>
+      </div>
+      <div  class="tab-int" id="tab-2">
+         <h2>Ressources</h2>
+         <div class="entry-content">
+            <p><strong>Vous trouverez ici les ressources pour utiliser au mieux le thème speedfly !</strong></p>
+            <h2>Images et médias</h2>
+            <h3>Images de sécurité et de confiance:</h3>
+            <p>Clic droit -&gt; enregistrer l’image sous…</p>
+            <p><img class="alignnone size-full wp-image-543" src="https://dgeodev.com/wp-content/uploads/2017/08/secure2.png" alt="secure2" width="480" height="122"></p>
+            <p><img class="alignnone size-full wp-image-542" src="https://dgeodev.com/wp-content/uploads/2017/08/secure.jpg" alt="secure" width="466" height="96"></p>
+            <p><img class="alignnone size-full wp-image-1072" src="https://dgeodev.com/wp-content/uploads/2017/09/paiement_securise_grande.png" alt="paiement_securise_grande" width="599" height="188"></p>
+            <p><img class="alignnone size-full wp-image-1425" src="https://dgeodev.com/wp-content/uploads/2017/09/cart-img-secure.png" alt="cart-img-secure" width="289" height="38"></p>
+            <p><img class="alignnone size-full wp-image-1426" src="https://dgeodev.com/wp-content/uploads/2017/09/cart-img-secure-red.png" alt="cart-img-secure-red" width="289" height="38"></p>
+            <p><img class="alignnone size-full wp-image-1519" src="https://dgeodev.com/wp-content/uploads/2017/09/cart-img-secure4.png" alt="cart-img-secure4" width="350" height="56"></p>
+            <p><img class="alignnone size-medium wp-image-1664" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-300x56.png" alt="unnamed" width="300" height="56"></p>
+            <p><img class="alignnone size-medium wp-image-1663" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-300x50.jpg" alt="unnamed" width="300" height="50"></p>
+            <p><img class="alignnone size-medium wp-image-1662" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-11-300x43.png" alt="unnamed (11)" width="300" height="43"></p>
+            <p><img class="alignnone size-full wp-image-1074" src="https://dgeodev.com/wp-content/uploads/2017/09/secure3.png" alt="secure3" width="402" height="57"></p>
+            <p><img class="alignnone size-medium wp-image-1661" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-10-300x135.png" alt="unnamed (10)" width="300" height="135"></p>
+            <p><img class="alignnone size-medium wp-image-1660" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-9-300x135.png" alt="unnamed (9)" width="300" height="135"></p>
+            <p><img class="alignnone size-medium wp-image-1659" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-8-300x162.png" alt="unnamed (8)" width="300" height="162"></p>
+            <p><img class="alignnone size-medium wp-image-1658" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-7-300x87.png" alt="unnamed (7)" width="300" height="87"></p>
+            <p><img class="alignnone size-full wp-image-918" src="https://dgeodev.com/wp-content/uploads/2017/09/badges-securite2_large_998ee3bd-3961-4e05-8266-3521f02fae6f_large.png" alt="badges-securite2_large_998ee3bd-3961-4e05-8266-3521f02fae6f_large" width="480" height="121"></p>
+            <p><img class="alignnone size-full wp-image-1075" src="https://dgeodev.com/wp-content/uploads/2017/09/badge.png" alt="badge" width="480" height="121"></p>
+            <p><img class="alignnone size-full wp-image-1521" src="https://dgeodev.com/wp-content/uploads/2017/09/badges-securite2_large3.png" alt="badges-securite2_large3" width="480" height="121"></p>
+            <p><img class="alignnone size-medium wp-image-1648" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-1-300x103.jpg" alt="unnamed (1)" width="300" height="103"></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p><img class="alignnone size-full wp-image-1073" src="https://dgeodev.com/wp-content/uploads/2017/09/Satisfait_ou_rembourse.png" alt="Satisfait_ou_rembourse" width="425" height="243"></p>
+            <p><img class="alignnone size-full wp-image-1651" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-2.png" alt="unnamed (2)" width="207" height="231"></p>
+            <p><img class="alignnone size-medium wp-image-1652" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-3-300x240.jpg" alt="unnamed (3)" width="300" height="240"></p>
+            <p><img class="alignnone size-medium wp-image-1653" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-3-300x237.png" alt="unnamed (3)" width="300" height="237"></p>
+            <p><img class="alignnone size-full wp-image-1654" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-4.jpg" alt="unnamed (4)" width="300" height="300"></p>
+            <p><img class="alignnone size-full wp-image-1655" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-4.png" alt="unnamed (4)" width="220" height="220"></p>
+            <p><img class="alignnone size-medium wp-image-1656" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-5-300x300.png" alt="unnamed (5)" width="300" height="300"></p>
+            <p><img class="alignnone size-medium wp-image-1657" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-6-300x300.png" alt="unnamed (6)" width="300" height="300"></p>
+            <p><img class="alignnone size-medium wp-image-1650" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-2-300x185.jpg" alt="unnamed (2)" width="300" height="185"></p>
+            <p><img class="alignnone size-medium wp-image-1649" src="https://dgeodev.com/wp-content/uploads/2018/05/unnamed-1-300x203.png" alt="unnamed (1)" width="300" height="203"></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <h3>Images produits</h3>
+            <p><img class="alignnone size-full wp-image-930" src="https://dgeodev.com/wp-content/uploads/2017/09/top10-png_large_1_large.png" alt="top10-png_large_1_large" width="480" height="242"></p>
+            <p><img class="alignnone size-full wp-image-931" src="https://dgeodev.com/wp-content/uploads/2017/09/m250-logo-vu-a-la-tele-72dpi-1239140888_medium_160e6b01-1b4f-4019-8ba3-72c53e77fc2a_compact.jpg" alt="m250-logo-vu-a-la-tele-72dpi-1239140888_medium_160e6b01-1b4f-4019-8ba3-72c53e77fc2a_compact" width="160" height="131"></p>
+         </div>
+      </div>
+      <div class="tab-int" id="tab-9">
+         <h2>Guide d'utilisation</h2>
+         <h3>Liste des vidéos</h3>
+         <div>
+            <h3 class="_2cuy _50a1 _2vxa">Comment mettre à jour Speedfly</h3>
+            <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Mise à jour officielle</span></div>
+            <div class="_2cuy _3dgx _2vxa"><a href="https://www.youtube.com/watch?v=9SFgNAG7BF0" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy" data-lynx-uri="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D9SFgNAG7BF0&amp;h=ATMQpEO4Kf9AoBt_vTdn4OKubO9gPDPaF62so76VFimobXjfBICnEYxgqG-dmcoKIx1F2h3Gi6jkF5wevDTA4liao90j7x3rBynHodXOJ7ecy8UPdoo">https://www.youtube.com/watch?v=9SFgNAG7BF0</a></div>
+            <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Mise à jour + traductions + fichiers de surcharges (attention sur certaines MAJ il ne faudra pas reprendre votre ancien fichier de traduction !)</span></div>
+            <div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D3MXtk9bwG0o%26t%3D75s&amp;h=ATNim7ES2RiHJhN1WQDjJTcCnxf45KO8ucDKGrW3QbmYsDvNFAlI6LSMAKfAT9g6p96PlI53iqZXJFwfBvliZIQDGFGI22d8hQ2avN_iV-MlF1e1rWk" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=3MXtk9bwG0o&amp;t=75s</a> </div>
+            <h3 class="_2cuy _50a1 _2vxa">Comment utiliser Speedfly</h3>
+            <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Personnaliser son thème - Paramètres génériques </span></div>
+            <div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DzhbyYsYbXyI%26t%3D391s&amp;h=ATMh7OEeFO2R1eWiqmPsrHAXY9sUHD0lUNwfMlpYga4RcVtMrhwZyPBwA7hmgDdVI-xxD5bEK0gozy76BDJCvZht4PVujg7YDpbHRW9ThfzczZ8Sdng" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=zhbyYsYbXyI&amp;t=391s</a></div>
+            <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Personnaliser sa page d'accueil avec Speedfly - Header et Footer</span></div>
+            <div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dcn3XU7AkwnI%26t%3D20s&amp;h=ATMVstpJh1teLWljiZOfvWNN0tItQAFQsQErsV841os1-GHX9n-WAW16r9waJuampOdXpPfyAu_KkZfC3eOq3lSp0EK9C3NdSQXwBXxT30pjdhK_OFU" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=cn3XU7AkwnI&amp;t=20s</a></div>
+            <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Les sections dans Speedfly - Carrousel + Image et texte + Témoignages</span></div>
+            <div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DhO_j7c0hodw%26t%3D104s&amp;h=ATOuQZd3kCFDWrmdCyma2OyZeSy6lmnhb5tSLao59hYb2xz3euX8zeRRCLJebtmebNnPctfxWkolDlKwiRHyGXfhh3cciACyUBOI-bfSbpnFYT6xFN-4GshA-WA3gU74" target="_blank" rel="noopener nofollow" data-lynx-mode="async">https://www.youtube.com/watch?v=hO_j7c0hodw&amp;t=104s</a></div>
+            <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Les sections dans Speedfly - Zone de texte + Zone Html + Vidéo</span></div>
+            <div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DTE7AbmO6dog%26t%3D32s&amp;h=ATP12opKKVOkG5brG2STotL8VP2VhW8n6Y5Mq7hZJz69Rg8hQbs-_2ZsKx3BinsdbMgI3SHa24EPeO0pHZCYt07j6eh169vkkxbpH5SgTs8fkjLerj4" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=TE7AbmO6dog&amp;t=32s</a></div>
+            <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Les sections dans Speedfly - Liste des collections + Liste des produits</span></div>
+            <div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DlKtn06EBlpY%26t%3D163s&amp;h=ATOUuT9d1hLQPASh2FbLoJP7rZgFzQw7QbkJTIFyBgJh7tzImaOT7JQXNz8ZDJGCIGZUSyYDk2GjRefEyyhf67piJx2aULUecCQbnlvQlmc2h5excZI" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=lKtn06EBlpY&amp;t=163s</a></div>
+            <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Les sections dans Speedfly - Mise en avant d'un produit</span></div>
+            <div class="_2cuy _3dgx _2vxa"> <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DC71X0EHu5fU%26t%3D36s&amp;h=ATO1uSOcon2VrF9LblrgxELE3lwVPw0swIIsee8gz31Zs-avCAnXMSG4Eetx2CCQXgWz6pL9Go9INg8NYQMbFvy99TrsYGZOjAwzIQPD_wyViYw2j313x9VptIHL9Vw_" target="_blank" rel="noopener nofollow" data-lynx-mode="async">https://www.youtube.com/watch?v=C71X0EHu5fU&amp;t=36s</a></div>
+            <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Comment créer une boutique shopify originale avec Speedfly</span></div>
+            <div class="_2cuy _3dgx _2vxa"> <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DKxQJUBclSpQ%26t%3D71s&amp;h=ATN7EEslYusU1W8GvL3rmpP7GmgAhNJetqU9Ppf2iE6uV8mBeyXICK0N7fcEij2jwDccFUVmOH--n8I6aCQUCl0N-Bybqv1m8q-rKRCCa_uiGe7cRQQ" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=KxQJUBclSpQ&amp;t=71s</a></div>
+            <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Comment faire une fiche produit sur Shopify avec Speedfly</span></div>
+            <div class="_2cuy _3dgx _2vxa"> <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DVYb50uEh-ho%26t%3D160s&amp;h=ATMRcisl7GzuUUA1ryqvm5S1ixizNbCMtV8A--Df6pk-yAt4K2o4R7HfQDn6eKxsaxiRMmOB0AjSSVFwNwSb5VMUtX2vvYM3bL4HYU0I5blBZqkfL2M" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=VYb50uEh-ho&amp;t=160s</a></div>
+            <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Comment faire une boutique shopify mono produit en - de 25mn</span></div>
+            <div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DeoX3R_x0W_0&amp;h=ATNo84PbP3XMb3DTPhr2JxP9GzR2kbcefG814G_7_Q3hLtMC0KzkvaBx6Z-UG_oJsXgqRXujAM6QQO563A0rpcIVIhWRrZNDrF3Vhd1j60jbZJH1W5g" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=eoX3R_x0W_0</a></div>
+            <h3 class="_2cuy _50a1 _2vxa">Les mises à jour</h3>
+            <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Speedfly 1.05 - Nouveautés de la Mise à jour de janvier 2018</span></div>
+            <div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DGnQxvdxpckg&amp;h=ATORTs1H_TgswJSsju6ZEMM-CDs4rfKsmsK7VCq0HYh8r0XSrduH-g8qbBoX6UomAqTOL9QDoaSZOPiKmW3C0J0wnDHpjLxhDcqbFTsL286J5Hpp_po" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=GnQxvdxpckg</a></div>
+            <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Speedfly 1.06 - Nouveautés de la Mise à jour de février 2018</span></div>
+            <div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DBO_QK755yvo%26t%3D198s&amp;h=ATOEDiCyoVhvTUchu1wv9LPerTndpNTYmgNQH-md-eQO8iDNBMhr-_A41HEOfEsurhXkjx1peY0qNLrgMdk3g3uAGls5-v50EOo_KcunKPFq41df7jA" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=BO_QK755yvo&amp;t=198s</a></div>
+            <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Speedfly 1.07 - Nouveautés de la Mise à jour de mars 2018</span></div>
+            <div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DuZJC40o5T-k%26t%3D15s&amp;h=ATOy_glLAngXn4khL460zPIB9QnmsbPTdV27rDGAYLZNtzzxYlbps1HX51f60uw9Y0EJA19jCqe8asutu8mePAgO4wy3QR8O3AYBYLi0tJAs7yv2BsM" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=uZJC40o5T-k&amp;t=15s</a></div>
+            <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Speedfly 1.08 - Nouveautés de la Mise à jour d’avril 2018</span></div>
+            <div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fyoutu.be%2FBnHSu4OTT9A&amp;h=ATOBctKSCq8IGoGQC7pMR3PL2tE1gokM_m4iM0TR5j4zi__I5ULf3w4Y3bBW2R-jH1eROGuEBAmZkFOiFL4oPPJVyno1B86D3Fgh9aEIQjvU-fgqVvdDoLB5yEcIliGA" target="_blank" rel="noopener nofollow" data-lynx-mode="async">https://youtu.be/BnHSu4OTT9A</a> </div>
+            <div class="_2cuy _3dgx _2vxa"><span class="_4yxo">Speedfly 1.09 - Nouveautés de la Mise à jour de Mai 2018</span></div>
+            <div class="_2cuy _3dgx _2vxa"><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DyLxii2fZDkU%26t%3D17s&amp;h=ATNUJve59hz1Z_EgKQixM9GdZT8R8M9OZNeX4IWCoLgGKBLiqjboLQgG2sWsjvx3tbK4dVWGhxet1RY3937r8IwK-hwfEBo7kqEc3A1lFGEe8pnsfzM" target="_blank" rel="noopener nofollow" data-lynx-mode="asynclazy">https://www.youtube.com/watch?v=yLxii2fZDkU&amp;t=17s</a></div>
+         </div>
+      </div>
+      <div  class="tab-int" id="tab-3">
+         <h2>Codes utiles</h2>
+         <h3><strong>Afficher le simulateur fictif d’une promotion limitée dans le temps + stock disponible</strong></h3>
+         <p>Ce code est à ajouter dans l’éditeur de la fiche produit&nbsp;que vous voulez !</p>
+         <p>Attention ce code est utilisable uniquement si vous avez choisit de ne pas activer le Timer sur toutes les fiches dans les options du thème (product)</p>
+         <pre>&lt;div id='showcdtimer' data-jours='0' data-heures='0' data-minutes='40'&gt;&lt;/div&gt;</pre>
+         <h3>Code pour le tableau de codes promos</h3>
+         <pre>&lt;table class="discount-table" width="100%"&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
  &lt;th&gt;&lt;p&gt;&lt;strong&gt;Quantité&lt;/strong&gt;&lt;/p&gt;&lt;/th&gt;
@@ -351,10 +364,10 @@ ul.tabs:after {
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</pre>
-<h2></h2>
-<h2>Codes et textes du Footer en FR:</h2>
-<p><strong>Code HMTL pour la zone «&nbsp;nos avantages&nbsp;» sous la description</strong></p>
-<pre>&lt;h2&gt;La livraison est GRATUITE!&lt;/h2&gt; &lt;br&gt;
+         <h2></h2>
+         <h2>Codes et textes du Footer en FR:</h2>
+         <p><strong>Code HMTL pour la zone «&nbsp;nos avantages&nbsp;» sous la description</strong></p>
+         <pre>&lt;h2&gt;La livraison est GRATUITE!&lt;/h2&gt; &lt;br&gt;
 &lt;h2&gt;Nos avantages&lt;/h2&gt; 
 &lt;ul class="liv_carac"&gt;
 &lt;li&gt;100% Satisfait ou Remboursé&lt;/li&gt;
@@ -364,8 +377,8 @@ ul.tabs:after {
 &lt;/ul&gt;
 
 </pre>
-<p><strong>Livraison Gratuite</strong></p>
-<pre>&lt;div style="text-align:center;"&gt;
+         <p><strong>Livraison Gratuite</strong></p>
+         <pre>&lt;div style="text-align:center;"&gt;
 &lt;svg viewBox="0 0 40 40" width="80px"&gt;
 &lt;rect x="2.5" y="16.846" fill="none" stroke="#78be20" stroke-width="1.75" stroke-miterlimit="10" width="5.332" height="18.048"&gt;&lt;/rect&gt;
 &lt;path fill="none" stroke="#78be20" stroke-width="1.75" stroke-miterlimit="10" d="M7.969,31.609c0,0,10.459,3.285,14.15,3.285c0,0,9.229,0.407,15.381-6.771c0,0-2.002-5.919-4.102-5.537"&gt;&lt;/path&gt;
@@ -378,8 +391,8 @@ ul.tabs:after {
 &lt;/div&gt;
 
 </pre>
-<p><strong>Paiement sécurisés</strong></p>
-<pre>&lt;div style="text-align:center;"&gt;
+         <p><strong>Paiement sécurisés</strong></p>
+         <pre>&lt;div style="text-align:center;"&gt;
 &lt;svg viewBox="0 0 40 40" width="80px"&gt;
 &lt;path fill="none" stroke="#78be20" stroke-width="1.75" stroke-miterlimit="10" d="M37.5,30c0,1.65-1.35,3-3,3h-29c-1.65,0-3-1.35-3-3V10c0-1.65,1.35-3,3-3h29c1.65,0,3,1.35,3,3V30z"&gt;&lt;/path&gt;
 &lt;line fill="none" stroke="#78be20" stroke-width="1.75" stroke-miterlimit="10" x1="2.5" y1="12" x2="37.5" y2="12"&gt;&lt;/line&gt;
@@ -392,8 +405,8 @@ ul.tabs:after {
 &lt;h2&gt;Paiements Sécurisés&lt;/h2&gt;
 &lt;p&gt;Nous disposons d’un système de crytpage SSL pour protéger vos données personnelles ainsi que les moyens de paiement utilisés. Nous utilisons le système de paiement sécurisé de Stripe et Paypal&lt;/p&gt;
 &lt;/div&gt;</pre>
-<p><strong>Service 24h sur 24</strong></p>
-<pre>&lt;div style="text-align:center;"&gt;
+         <p><strong>Service 24h sur 24</strong></p>
+         <pre>&lt;div style="text-align:center;"&gt;
 &lt;svg viewBox="0 0 40 40" width="80px"&gt;
 &lt;line fill="none" stroke="#78be20" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="25.791" y1="33.322" x2="25.791" y2="38"&gt;&lt;/line&gt;
 &lt;line fill="none" stroke="#78be20" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="15.441" y1="34.478" x2="15.441" y2="38"&gt;&lt;/line&gt;
@@ -410,8 +423,8 @@ ul.tabs:after {
 &lt;/div&gt;
 
 </pre>
-<h3><strong>FAQ</strong></h3>
-<pre>&lt;h2&gt;Comment puis-je vérifier l'état de ma commande ?&lt;/h2&gt;
+         <h3><strong>FAQ</strong></h3>
+         <pre>&lt;h2&gt;Comment puis-je vérifier l'état de ma commande ?&lt;/h2&gt;
 &lt;p&gt;Après qu'une commande ait été passée, elle est envoyée au plus vite à l'un de nos centres d'exécution, dans lequel votre article sera posté.&lt;br&gt;Vous pouvez nous contacter pendant les premières 48 heures pour un remboursement complet sans raisons particulières. &lt;br&gt;Sont disponibles ci-dessous les délais de livraison en fonction de votre localisation.&amp;nbsp;&lt;/p&gt;
 &lt;h2&gt;Quelles sont les temps d'expédition ?&lt;/h2&gt;
 &lt;p&gt;Délai de livraison vers l'Europe : 2 à 3 semaines&lt;br&gt;Délai de livraison vers l'Amérique du Nord (Canada et États-Unis) : 3 à 4 semaines &lt;br&gt;Délai de livraison vers l'Afrique, l'Amérique du Sud et l'Asie: 3 à 5 semaines.&lt;/p&gt;
@@ -421,8 +434,8 @@ ul.tabs:after {
 &lt;p&gt;Nous acceptons carte de crédit Visa et Mastercard. Vous pouvez aussi payer par Paypal.&lt;br&gt;Pour paiement avec une carte Aurore, Carte Bancaire, Maestro et autre carte de débit il faut faire le paiement en passant par Paypal même si vous n'avez pas de compte&lt;br&gt;Pour ce faire, vous n’avez qu’à sélectionner « Acheter avec Paypal » sur la page du panier d’Achat. Vous pourrez ensuite sélectionner « Payer par carte de crédit ou carte de débit Visa » sur la page suivante. Ensuite, vous entrez votre pays (France), et dans le type de carte, vous pourrez sélectionner votre carte&lt;br&gt;&lt;strong&gt;N’hésitez pas à nous contacter si avez des questions!&lt;/strong&gt;&lt;/p&gt;
 
 </pre>
-<h3><strong>Pourquoi acheter chez nous?</strong></h3>
-<pre>&lt;h2&gt;Pourquoi acheter chez nous ?&lt;/h2&gt;
+         <h3><strong>Pourquoi acheter chez nous?</strong></h3>
+         <pre>&lt;h2&gt;Pourquoi acheter chez nous ?&lt;/h2&gt;
 &lt;p&gt;Car nous accordons un soin particulier au choix de nos produits.&lt;br&gt;
 Ils doivent être innovants et d'une très bonne qualité.&lt;br&gt;
 Nos articles sont testés et approuvés par notre service.&lt;br&gt;
@@ -438,10 +451,10 @@ Nous sommes des passionnés et nous mettons tout en oeuvre pour vous faire déco
 &lt;li&gt;Tous les articles sont en stock et prêts à être expédiés lors de la commande&lt;/li&gt;
 &lt;li&gt;La majorité des clients qui aiment nos produits reviennent pour des achats additionnels !&lt;/li&gt;
 &lt;/ul&gt;</pre>
-<h2></h2>
-<h2>Codes et textes du Footer en EN:</h2>
-<p><strong>Code HMTL pour la zone «&nbsp;nos avantages&nbsp;» sous la description</strong></p>
-<pre>&lt;h2&gt;FREE DELIVERY&nbsp;!&lt;/h2&gt; &lt;br&gt;
+         <h2></h2>
+         <h2>Codes et textes du Footer en EN:</h2>
+         <p><strong>Code HMTL pour la zone «&nbsp;nos avantages&nbsp;» sous la description</strong></p>
+         <pre>&lt;h2&gt;FREE DELIVERY&nbsp;!&lt;/h2&gt; &lt;br&gt;
 &lt;h2&gt;OUR ADVANTAGES&lt;/h2&gt; 
 &lt;ul class="liv_carac"&gt;
 &lt;li&gt;100% Money-back guarantee&lt;/li&gt;
@@ -451,8 +464,8 @@ Nous sommes des passionnés et nous mettons tout en oeuvre pour vous faire déco
 &lt;/ul&gt;
 
 </pre>
-<p><strong>Livraison Gratuite</strong></p>
-<pre>&lt;div style="text-align:center;"&gt;
+         <p><strong>Livraison Gratuite</strong></p>
+         <pre>&lt;div style="text-align:center;"&gt;
 &lt;svg viewBox="0 0 40 40" width="80px"&gt;
 &lt;rect x="2.5" y="16.846" fill="none" stroke="#78be20" stroke-width="1.75" stroke-miterlimit="10" width="5.332" height="18.048"&gt;&lt;/rect&gt;
 &lt;path fill="none" stroke="#78be20" stroke-width="1.75" stroke-miterlimit="10" d="M7.969,31.609c0,0,10.459,3.285,14.15,3.285c0,0,9.229,0.407,15.381-6.771c0,0-2.002-5.919-4.102-5.537"&gt;&lt;/path&gt;
@@ -465,8 +478,8 @@ Nous sommes des passionnés et nous mettons tout en oeuvre pour vous faire déco
 &lt;/div&gt;
 
 </pre>
-<p><strong>Paiement sécurisés</strong></p>
-<pre>&lt;div style="text-align:center;"&gt;
+         <p><strong>Paiement sécurisés</strong></p>
+         <pre>&lt;div style="text-align:center;"&gt;
 &lt;svg viewBox="0 0 40 40" width="80px"&gt;
 &lt;path fill="none" stroke="#78be20" stroke-width="1.75" stroke-miterlimit="10" d="M37.5,30c0,1.65-1.35,3-3,3h-29c-1.65,0-3-1.35-3-3V10c0-1.65,1.35-3,3-3h29c1.65,0,3,1.35,3,3V30z"&gt;&lt;/path&gt;
 &lt;line fill="none" stroke="#78be20" stroke-width="1.75" stroke-miterlimit="10" x1="2.5" y1="12" x2="37.5" y2="12"&gt;&lt;/line&gt;
@@ -479,8 +492,8 @@ Nous sommes des passionnés et nous mettons tout en oeuvre pour vous faire déco
 &lt;h2&gt;SECURE PAYMENTS&lt;/h2&gt;
 &lt;p&gt;We are using SSL encryption in order to protect your personal data as well as to secure all payment methods. We are using Stripe and Paypal’s secure payment systems. &lt;/p&gt;
 &lt;/div&gt;</pre>
-<p><strong>Service 24h sur 24</strong></p>
-<pre>&lt;div style="text-align:center;"&gt;
+         <p><strong>Service 24h sur 24</strong></p>
+         <pre>&lt;div style="text-align:center;"&gt;
 &lt;svg viewBox="0 0 40 40" width="80px"&gt;
 &lt;line fill="none" stroke="#78be20" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="25.791" y1="33.322" x2="25.791" y2="38"&gt;&lt;/line&gt;
 &lt;line fill="none" stroke="#78be20" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="15.441" y1="34.478" x2="15.441" y2="38"&gt;&lt;/line&gt;
@@ -497,8 +510,8 @@ Nous sommes des passionnés et nous mettons tout en oeuvre pour vous faire déco
 &lt;/div&gt;
 
 </pre>
-<h3><strong>FAQ</strong></h3>
-<pre>&lt;h2&gt;HOW CAN I CHECK MY ORDER STATUS&nbsp;?&lt;/h2&gt;
+         <h3><strong>FAQ</strong></h3>
+         <pre>&lt;h2&gt;HOW CAN I CHECK MY ORDER STATUS&nbsp;?&lt;/h2&gt;
 &lt;p&gt;After an order has been placed, it is dispatched as fast as possible to one of our fulfillement center, from which your order will be shipped. &lt;br&gt;
 You can contact us in the next 48 hours to get a full refund, with no specific reason.&lt;br&gt;
 You will find below the delivery times according to your localization.&lt;/p&gt;
@@ -516,8 +529,8 @@ Delivery time to Africa, South America and Asia&nbsp;: 3 to 5 weeks.&lt;/p&gt;
 In order to do so, you have to select «&nbsp;Buy with Paypal&nbsp;» on the cart/payment page. You can then select «&nbsp;Pay by credit or Visa debit card&nbsp;» on the following page. Enter your country and select the type of your card.
 &lt;strong&gt;Do not hesitate to contact us if you have any question&nbsp;!&lt;/strong&gt;&lt;/p&gt;
 </pre>
-<h3><strong>Pourquoi acheter chez nous?</strong></h3>
-<pre>&lt;h2&gt;WHY CHOOSE US&nbsp;? &lt;/h2&gt;
+         <h3><strong>Pourquoi acheter chez nous?</strong></h3>
+         <pre>&lt;h2&gt;WHY CHOOSE US&nbsp;? &lt;/h2&gt;
 &lt;p&gt;Because we pay a great attention to our products’ selection.&lt;br&gt;
 They have to be innovative and of a high quality.&lt;br&gt;
 Our items have been tested and approved by our services.&lt;br&gt;
@@ -534,10 +547,10 @@ We are passionate and we do everything possible to make you discover our items&n
 &lt;li&gt;All the items are available and ready to be shipped upon order&lt;/li&gt;
 &lt;li&gt;Most of the clients who like our products come back to make some more purchases&nbsp;!&lt;/li&gt;
 &lt;ul&gt;</pre>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<h2>Code exemple d’une page mono produit</h2>
-<pre>&lt;h2&gt;&lt;strong&gt;&lt;span style="color: #ff0000;"&gt;!!!! PROMO EXCEPTIONNELLE -50% !!!!&lt;/span&gt;&lt;/strong&gt;&lt;/h2&gt;
+         <p>&nbsp;</p>
+         <p>&nbsp;</p>
+         <h2>Code exemple d’une page mono produit</h2>
+         <pre>&lt;h2&gt;&lt;strong&gt;&lt;span style="color: #ff0000;"&gt;!!!! PROMO EXCEPTIONNELLE -50% !!!!&lt;/span&gt;&lt;/strong&gt;&lt;/h2&gt;
 &lt;h2&gt;&lt;span style="color: #38761d;"&gt;Déjà 57 commandes aujourd'hui !&lt;/span&gt;&lt;/h2&gt;
 &lt;h2&gt;Réalisez des Makis parfaits avec notre Magic&nbsp;Makis&lt;/h2&gt;
 &lt;p&gt;Faire des rouleaux de Makis ne sera plus une galère!&lt;br /&gt;&lt;br /&gt;Magic Makis rend la création de makis incroyablement facile, instinctif et surtout très ludique.&lt;/p&gt;
@@ -566,474 +579,509 @@ We are passionate and we do everything possible to make you discover our items&n
 &lt;p&gt;&nbsp;&lt;/p&gt;
 &lt;h2&gt;&lt;strong&gt;&lt;span style="color: #ff0000;"&gt;!!!! PROMO EXCEPTIONNELLE -50% !!!!&lt;/span&gt;&lt;/strong&gt;&lt;/h2&gt;
 &lt;h2&gt;&lt;span style="color: #38761d;"&gt;Déjà 57 commandes aujourd'hui !&lt;/span&gt;&lt;/h2&gt;</pre>
-          
-  </div> 
-  <div  class="tab-int" id="tab-4">
-    <h2>Liens utiles</h2>
-    <p>➨ Lien version d’essai gratuit pour Shopify: <a href="https://goo.gl/MqXTvu">https://goo.gl/MqXTvu </a></p>
-    <p>➨ Code d'accès aux pages privées: (vous l’avez reçu par mail) </p>
-    <p>➨ Comment faire une mise à jour: <a href="https://www.youtube.com/watch?v=9SFgNAG7BF0&t=2s">https://www.youtube.com/watch?v=9SFgNAG7BF0&t=2s</a></p>
-    <p>➨ Le groupe Facebook dédié: <a href="https://goo.gl/afKJec">https://goo.gl/afKJec</a> </p>
-    <p>➨ Chaîne Youtube: <a href="https://goo.gl/YYPka1">https://goo.gl/YYPka1</a></p>
-    <h3>Générateurs de : politique de retours, CGV, mentions légales et politique de remboursement </h3>
-    <p>➨ Mentions légales: <a href="https://www.subdelirium.com/generateur-de-mentions-legales">https://www.subdelirium.com/generateur-de-mentions-legales</a></p>
-    <p>➨ Politique de retour: <a href="https://fr.shopify.com/outils/generateur-de-politique">https://fr.shopify.com/outils/generateur-de-politique</a></p>
-    <p>➨ Politique de remboursement: <a href="https://fr.shopify.com/outils/generateur-de-politique/remboursement">https://fr.shopify.com/outils/generateur-de-politique/remboursement</a></p>
-    <p>➨ CGV: <a href="https://fr.shopify.com/outils/generateur-de-politique/conditions-generales-de-vente-et-d-utilisation">https://fr.shopify.com/outils/generateur-de-politique/conditions-generales-de-vente-et-d-utilisation</a></p>
-
-  </div> 
-  <div  class="tab-int" id="tab-5">
-    <h2>Outils pratiques</h2>
-    <h3>Liens rapides vers vos produits</h3>
-    <ul>
-    <% @products.each do |product| %>
-      <li><%= link_to product.title, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %></li>
-    <% end %>
-    </ul>
-    <h3>Autres outils à venir...</h3>
-     <div style="display:none;">
-    <h3>Informations sur la boutique</h3>
-   <%= debug @shop %></div>
-
-  </div> 
-  <div  class="tab-int" id="tab-6">
-  <h2>Support - Assistance</h2>
-  <div class="col-lg-12 text-center">            
-    <div class="clearfix"></div>
-    <h3 class="section-heading">Quel est votre soucis ?</h3>
-
-           
-
-    <h4>Pour les questions génériques et liées au thème merci de poster vos questions sur le groupe dédié</h4>
-    <p class="lead"><a href="https://www.facebook.com/groups/speedflytheme/" target="_blank" class="btn-1 btn-primary">Groupe Facebook</a></p>
-    <h4>Pour les questions plus confidentielles ou spécifiques merci de poser votre question en MP sur le Messenger de la page dédiée</h4>
-    <p class="lead"><a href="https://m.me/speedflytheme" target="_blank" class="btn-1 btn-primary">Tchat Messenger</a></p>
-    
-    <p>Merci, <br>l'équipe Speedfly</p>
-    <p class="lead" style="display:none;">Veuillez utiliser ce formulaire si votre demande est spécifique en détaillant votre problème le plus clairement possible</p>
-    </div>
-  </div> 
-  <div  class="tab-int" id="tab-7">
-  <h2>Apps conseillées</h2>
-  <h3>Système d'avis</h3>
-  <a href="https://apps.shopify.com/product-reviews" target="_blank">https://apps.shopify.com/product-reviews</a><br />
-  <a href="https://apps.shopify.com/loox" target="_blank" >https://apps.shopify.com/loox</a><br />
-  <a href="https://www.ryviu.com/shopify/install" target="_blank" >https://www.ryviu.com/shopify/install</a>
-
-  <h3>Système d'upsell et cross sell</h3>
-  <a href="https://apps.shopify.com/discounted-upsells" target="_blank" >https://apps.shopify.com/boost-sales</a>
-
-  <h3>Système récupération des ventes perdues et connexion messenger</h3>
-  <a href="https://apps.shopify.com/recart" target="_blank" >https://apps.shopify.com/recart</a>
-
-  <h3>Système de newsletter et récupération de mails</h3>
-  <a href="https://apps.shopify.com/mailchimp" target="_blank">https://apps.shopify.com/mailchimp</a><br />
-  <a href="https://apps.shopify.com/privy" target="_blank">https://apps.shopify.com/privy</a>
-
-  <h3>Convertisseur de devises</h3>
-  <a href="https://apps.shopify.com/doubly-currency-converter" target="_blank">https://apps.shopify.com/doubly-currency-converter</a>
-
-  <h3>Système d'automatisation des commandes en dropshpping</h3>
-  <a href="https://apps.shopify.com/oberlo" target="_blank">https://apps.shopify.com/oberlo</a>
-
-  <h3>Système pop up des articles vendus (réel et fake)</h3>
-  <a href="https://apps.shopify.com/sales-pop" target="_blank">https://apps.shopify.com/sales-pop</a>
-
-  <h3>Système de facturation</h3>
-  <a href="https://apps.shopify.com/conversio" target="_blank">https://apps.shopify.com/conversio</a>
-  </div> 
-  <div  class="tab-int" id="tab-10">
-    <h2>Faire un don</h2>
-    <p>Si vous aimez Speedfly et mon travail et que vous souhaitez m'encourager à continuer n'hésitez pas à faire une donation en cliquant sur le bouton ci-dessous</p>
-    <p><a class="btn-1" href="https://www.tipeee.com/speedflytheme" target="_blank">Faire un don</a></p>
-    <p>Merci d'avance</p>
-  </div> 
-  <div  class="tab-int" id="tab-8">
-   
-    <div class="entry-content">
-      <h2>Listes des mises à jour</h2>
-<script>jQuery(document).ready(function($){$("#accordions-1163.accordions").accordion({active: "",event: "click",collapsible: false,heightStyle: "content",animated: "swing",})})</script>
-<div id="accordions-1163" class="accordions accordions-themes flat accordions-1163"><div style="" class="accordions-head"><i class="accordion-icons left accordion-plus fa fa-chevron-up"></i><i class="accordion-icons left accordion-minus fa fa-arrow-down fa-chevron-down"></i><span class="accordions-head-title">[Mise à jour du 08-05-2018]</span></div><div class="accordion-content"><ul>
-<li>Fonctionnalité: Création d'un module pour pouvoir mettre des articles du blog sur la page d'accueil</li>
-<li>Fonctionnalité: Rajout d'une case à cocher sur le panier avec d'accepter les CGV</li>
-<li>Fonctionnalité: Création d'une application intégrée de gestion du RGPD sur formulaire et newsletter</li>
-<li>Fonctionnalités : rajout de 2 type de compte à rebours - Mémorisation du temps resté sur le site (cookies) + date butoir</li>
-<li>Amélioration: Stock fictif bloqué à 2</li>
-<li>Amélioration: rajout des jours pour le compte à rebours</li>
-<li>Amélioration: pourvoir arrondir les images des vignettes</li>
-<li>Amélioration: pouvoir supprimer l'économie gagnée mais laisser le %</li>
-<li>Amélioration: Le bouton continuer mes achats revient désormais sur la page précédente</li>
-<li>Option: Pouvoir afficher l'image sur les articles de blog</li>
-<li>Option: Rajout d'un champ de texte dans la colonne de droite des articles</li>
-<li>Option: Pouvoir mettre une image dans le header</li>
-<li>Option: Pouvoir mettre une image dans le footer</li>
-<li>Option: Pouvoir mettre une vidéo interne dans le module vidéo de la page d'accueil</li>
-<li>Option: pourvoir choisir l'icone du acheter maintenant</li>
-<li>Option: Pouvoir centrer le menu sur le header classique</li>
-<li>Amélioration: Déplacement de la pastille épuisé au centre de l'image afin d'éviter d'avoir la pastille Promo au même endroit</li>
-<li>Amélioration: Optimisation du RWD</li>
-<li>Optimisation de l'ergonomie</li>
-<li>Optimisation des fichiers pour gagner en performance</li>
-<li>Ménage dans les fichiers</li>
-</ul>
-</div><div style="" class="accordions-head"><i class="accordion-icons left accordion-plus fa fa-chevron-up"></i><i class="accordion-icons left accordion-minus fa fa-arrow-down fa-chevron-down"></i><span class="accordions-head-title">[Mise à jour du 03-04-2018]</span></div><div class="accordion-content"><ul>
-<li>Fonctionnalité: Création d'un système de navigation entre les produits d'une collection avec des flèches (produit suivant, produit précédent)</li>
-<li>Fonctionnalité: Création d'un système d'information du contenu du panier au survol du bouton Panier</li>
-<li>Amélioration: Début de l'ajout des effets et options sur le carrousel</li>
-<li>Option: Ajout de 2 designs supplémentaires du compte à rebours</li>
-<li>Amélioration: possibilité de changer la couleur du compteur de visites et de la barre de stock</li>
-<li>Options: Rajout d'une option code promo au niveau du panier</li>
-<li>Options: Rajout d'options pour le moteur de recherche auto-complete + gestion des couleurs</li>
-<li>Améliorations: possibilité de mettre + de 2 mises en avant sur page d'accueil</li>
-<li>Amélioration: Correction des vidéos sur la fiche produit. elles ne prendront plus tout l'espace disponible</li>
-<li>Amélioration: possibilité de mettre le titre et prix sur les vignettes de la page d'accueil</li>
-<li>Option: masquer ou afficher les avis sur un produit de la page d'accueil (version mono)</li>
-<li>Option: pouvoir masquer le bouton voir le produit</li>
-<li>Option: Ajout d'une case à cocher pour pouvoir supprimer le 2ème formulaire sur une page produit</li>
-<li>Option: Dissocier la couleur des titres du texte du footer</li>
-<li>Option: Choix de la taille du bouton acheter maintenant sur PC</li>
-<li>Option: Choix de la limite des titres des produits sur les vignettes</li>
-<li>Amélioration: grosse optimisation des fichiers pour une meilleure organisation</li>
-<li>Amélioration: Optimisation du RWD</li>
-<li>Optimisation de l'ergonomie</li>
-<li>Optimisation des fichiers pour gagner en performance</li>
-<li>Ménage dans les fichiers</li>
-</ul>
-</div><div style="" class="accordions-head"><i class="accordion-icons left accordion-plus fa fa-chevron-up"></i><i class="accordion-icons left accordion-minus fa fa-arrow-down fa-chevron-down"></i><span class="accordions-head-title">[Mise à jour du 06-03-2018]</span></div><div class="accordion-content"><ul>
-<li>Fonctionnalité: Rajout d'un système de panier en pop up (modal)</li>
-<li>Fonctionnalité: Rajout d'une app intégrée de bandeau eu cookies</li>
-<li>Amélioration: Moteur de recherche autocomplete afin d'afficher à la volée les résultats</li>
-<li>Amélioration: couleur des onglets de tabulation administrables + dissociation des couleurs titres et prix</li>
-<li>Option: Pouvoir mettre le prix en bas de page</li>
-<li>Option: Rajout d'une option pour rendre la zone du carrousel cliquable</li>
-<li>Option: Pouvoir center le menu sur le header classique de la version Deluxe</li>
-<li>Option: Rajout d'un 3ème et 4ème headers</li>
-<li>Option: Prise en charge du nombre de stock disponible</li>
-<li>Option: administration de la couleur du champ Newsletter</li>
-<li>Amélioration: Rajout du prix barré au niveau du panier</li>
-<li>Amélioration: Couleur flèches des carrousels administrables</li>
-<li>Amélioration: Pourvoir mettre uniquement le bouton sur le carrousel</li>
-<li>Amélioration: Administration des textes de l'upsell pour les traductions</li>
-<li>Amélioration: Pastille promo automatiquement rajoutée sur les articles des vignettes</li>
-<li>Amélioration: Affichage du Economisez au survol sur la version classique et vignettes classiques du deluxe</li>
-<li>Amélioration: Ajouter image de sécurité paiement sur le panier</li>
-<li>Amélioration: rajouter la traduction heures et minutes du timer</li>
-<li>Amélioration: Rajout d'un bouton continuer mes achats sur le panier</li>
-<li>Option: Rajout d'un emplacement de texte au dessus du moteur de recherche et panier</li>
-<li>Amélioration: Optimisation du RWD</li>
-<li>Optimisation de l'ergonomie</li>
-<li>Optimisation des fichiers pour gagner en performance</li>
-<li>Ménage dans les fichiers</li>
-</ul>
-</div><div style="" class="accordions-head"><i class="accordion-icons left accordion-plus fa fa-chevron-up"></i><i class="accordion-icons left accordion-minus fa fa-arrow-down fa-chevron-down"></i><span class="accordions-head-title">[Mise à jour du 08-02-2018]</span></div><div class="accordion-content"><p>Liste mise à jour 8 Février 2018</p>
-<ul>
-<li>Module : Création d'un système de jeu du gobelet pour gagner un code promo au niveau du panier</li>
-<li>Amélioration: Possibilité de mettre un temps au niveau du compte à rebours d'une promo pour chaque produit en modifiant une valeur du code à utiliser<br>
-Exemple :
-<div id="showcdtimer" data-heures="0" data-minutes="20"></div>
-</li>
-<li>Option: Afficher que le stock sans le compte à rebours ou inverssement</li>
-<li>Amélioration: Ajout d'une flèche pour revenir en haut du site</li>
-<li>Amélioration: Des titres des collections sur la version classique + rajout de 5 blocs max</li>
-<li>Amélioration: Pouvoir rajouter un texte au dessus de champ de newsletter dans le footer </li>
-<li>Amélioration: Pouvoir rajouter un texte entre le logo et le moteur de recherche afin de mettre une baseline + option centrer la zone </li>
-<li>Amélioration: Zone de logos de paiements modifiés avec les logos officiels</li>
-<li>Option: Choix entre 2 headers différents (classique 1 + minimaliste 1) afin d'arriver à un nombre de headers différents de 4 ou 6 versions</li>
-<li>Option: Possibilité de mettre les images sécurités et 4 bonnes raisons en bas de page</li>
-<li>Option: Réafficher toutes les zones masquées du mono produit pour la gestion avec la visibilité des sections (oeil)</li>
-<li>Option: Ajout d'une zone HTML personnalisé sous les quantités de la fiche produit pour y mettre un tableau de code promos ou autres</li>
-<li>Option: Supprimer les onglets pour ne garder que la description du produit</li>
-<li>Option: Choix de la couleur des petits boutons du slider</li>
-<li>Option: Rajouter option afficher économie sur mise en avant et collections</li>
-<li>Option: Rajouter option afficher les prix barrés sur mise en avant et collections</li>
-<li>Amélioration: Ajout de la gestion de la couleur des textes du carrousel afin de dissocier le titre et la baseline</li>
-<li>Amélioration: Plus de choix au niveau des couleurs des textes des boutons</li>
-<li>Amélioration: Amélioration du menu sur mobile</li>
-<li>Amélioration de l'upsell sur mobile (iphone)</li>
-<li>Amélioration: Optimisation du RWD</li>
-<li>Optimisation de l'ergonomie</li>
-<li>Optimisation des fichiers pour gagner en performance</li>
-<li>Ménage dans les fichiers</li>
-</ul>
-</div><div style="" class="accordions-head"><i class="accordion-icons left accordion-plus fa fa-chevron-up"></i><i class="accordion-icons left accordion-minus fa fa-arrow-down fa-chevron-down"></i><span class="accordions-head-title">[Mise à jour du 09-01-2018]</span></div><div class="accordion-content"><p>Liste mise à jour 9 Janvier 2018</p>
-<ul>
-<li>Création d'un module: Système FAQ sur page d'accueil et gabari page</li>
-<li>Compatibilité APPS: amélioration de la compatibilité des apps en rajoutant des codes pré-instalés afin de garder vos apps lors du changement de version<br>
-Liste des apps: Product review, Loox, Ryviu, Recart, BETTER COUPON BOX - FREE EMAIL POPUPS, DISCOUNTED UPSELLS - CROSS SELL AND UPSELL</li>
-<li>Amélioration: Prise en charge d'un niveau supplémentaire de sous menu</li>
-<li>Option: possibilité de mettre des avis dans un onglet ou en bas de page</li>
-<li>Amélioration: recherche + panier plus réduit et champ recherche animé pour une meilleure ergonomie</li>
-<li>Option: Fleche de scroll du slider pour arriver au contenu sur la page d'accueil</li>
-<li>Option: Header - possibilité d'activer ou désactiver le menu fixé au scroll sur la version Deluxe</li>
-<li>Option: pouvoir masquer le moteur de recherche</li>
-<li>Option: Header adaptatif selon la taille de la zone</li>
-<li>Option: Possibilité de mettre une image de fond du site</li>
-<li>Option: Clic sur les images pour mettre à jour les variantes</li>
-<li>Option: Centrer badges de sécurité sur la fiche produit</li>
-<li>Amélioration: déplacement des Titres, prix et économie en dessous des images sur la page d'accueil au lieu de la superposition</li>
-<li>Amélioration: Suppression meilleures ventes des filtres</li>
-<li>Amélioration: uniformisation des produits dans les collections pour éviter le décalage du bouton acheter mnt</li>
-<li>Amélioration: Optimisation des espaces sur la page d'accueil du mono produit</li>
-<li>Amélioration: Optimisation du RWD</li>
-<li>Optimisation des fichiers pour gagner en performance</li>
-<li>Ménage dans les fichiers</li>
-</ul>
-</div><div style="" class="accordions-head"><i class="accordion-icons left accordion-plus fa fa-chevron-up"></i><i class="accordion-icons left accordion-minus fa fa-arrow-down fa-chevron-down"></i><span class="accordions-head-title">[Mise à jour du 04-12-2017]</span></div><div class="accordion-content"><h2>Liste mise à jour 4 Décembre 2017</h2>
-<ul>
-<li>- Création d'un module de carrousel évolué avec double système de navigation par vignettes et images principales pour les images des fiches produit</li>
-<li>- Rendre administrable le fond du texte image et texte de la page d'accueil</li>
-<li>- Couleur de fond du header administrable</li>
-<li>- Les couleurs deu carrousel sont désormais déplacées dans les settings génériques -&gt; couleurs</li>
-<li>- Amélioration de la gestion des couleurs des zones sur la page d'accueil</li>
-<li>- Donner la main sur la couleur de la zone économisez...</li>
-<li>- Rajouter une zone de texte (introduction) pour repprendre la main sur le texte des mises en avant</li>
-<li>- Correction du bug des chiffres sur le compteur de visites</li>
-<li>- Mettre système de filtres des collections en haut des vignettes au lieu d'un format colonne</li>
-<li>- Optimisation du balisage SEO sur la page d'accueil</li>
-<li>- Réduire taille des titres des vignettes sur V2 Deluxe et optimisation de son affichage</li>
-<li>- Correction zoom vignettes au dessus du header</li>
-<li>- Optimisation de l'espace sur le produit mis en avant</li>
-<li>- Panier: Grossissement du bouton passer à la caisse</li>
-<li>- Mise en avant produit: Ajout d'une option pour mettre un espace avant le titre</li>
-<li>- Amélioration des zones libre sur Tablette et mobile</li>
-<li>- Rajout d'une option pour modifier la couleur du bouton en savoir plus du slider</li>
-<li>- Header Lien compte - connexion: Choix dans l'administration de son affichage</li>
-<li>- Diminution de la taille des textes du carousel de la page d'accueil sur mobile</li>
-<li>- Mise en place d'une page de dissuasion lorsqu'une personne essaye de voir vos bests sellers</li>
-<li>- Changement du système d'affichage de l'upsell pour passer au clic sur le bouton du panier</li>
-<li>- Rajout d'un texte administrable dans le pop up d'upsell</li>
-</ul>
-</div><div style="" class="accordions-head"><i class="accordion-icons left accordion-plus fa fa-chevron-up"></i><i class="accordion-icons left accordion-minus fa fa-arrow-down fa-chevron-down"></i><span class="accordions-head-title">[Mise à jour du 06-11-2017]</span></div><div class="accordion-content"><h2>Liste mise à jour 6 Novembre 2017</h2>
-<ul>
-<li>Rajout d'une option pour passer du bouton "acheter maintenant" au checkout sans passer par l'étape panier</li>
-<li>Ajout d'un bouton ajouter au panier dans les collections et vues listing et vignettes</li>
-<li>Création d'un module d'upsell permettant de proposer jusqu'à 4 produits en cliquant sur le bouton acheter (upssell génériques peu importe le produit)</li>
-<li>Option bouton acheter vibrant</li>
-<li>Correction hauteur du header lorsque connexion et créer compte est affiché</li>
-<li>Création d'un fichier de surcharge CSS et JS afin de mettre vos codes personnels afin d'éviter la perte lors de mises à jour du thème</li>
-<li>Ajustement et amélioration du css et js pour une optimisation du site</li>
-<li>Ajustement des marges sur la version mono produit</li>
-<li>Correction d'un bug sur les varaintes au niveau du le 2ème formulaire en bas de page</li>
-<li>Correction slider pour les écran de + de 24 pouces</li>
-<li>Réorganisation des infos du produit et des couleurs dans l'administration afin de mieux s'y retrouver</li>
-</ul>
-<p><em><strong>Fichiers impactés:</strong>&nbsp;</em></p>
-<ul>
-<li>theme.liquid</li>
-<li>theme.scss.liquid</li>
-<li>product-template.liquid</li>
-<li>featured-image-text.liquid</li>
-<li>product-grid-item.liquid</li>
-<li>featured-product.liquid</li>
-<li>theme.js.liquid</li>
-<li>settings_schema.json</li>
-<li>surcharge.scss.liquid</li>
-<li>surcharge.js.liquid</li>
-<li>product-upsell.liquid</li>
-</ul>
-</div><div style="" class="accordions-head"><i class="accordion-icons left accordion-plus fa fa-chevron-up"></i><i class="accordion-icons left accordion-minus fa fa-arrow-down fa-chevron-down"></i><span class="accordions-head-title"> [Mise à jour du 23-10-2017]</span></div><div class="accordion-content"><h2>LISTE DES MODIFICATIONS ET AMÉLIORATIONS</h2>
-<ul>
-<li>Menu: Possibilité de changer la couleur de fond et du texte du menu et sous menu !<br>
-(v1 + v2 uniquement sur la version tablette et mobile + v3 mono produit)</li>
-<li>Témoignage: Possibilité de choisir la couleur du texte et de la couleur des flèches (fond + couleur)</li>
-<li>Mise en avant d'un produit sur la page d'accueil: Disposition des zones optimisées</li>
-<li>Bouton panier sur mobile: Réduction de la taille et ajustage de l'interlignage<br>
-Compteur de visites: taille du nombre réduit sur mobile et tablette</li>
-<li>Footer: Couleur du texte dans le champ email administrable</li>
-<li>Header Lien compte - connexion: Choix dans l'administration de son affiche ou non</li>
-<li>Limitation automatique de la hauteur du logo sur la v2 deluxe afin d'éviter le débordement du header sur les pages intérieures</li>
-</ul>
-<p><em><strong>Fichiers impactés:</strong>&nbsp;</em></p>
-<ul>
-<li>product-template.liquid</li>
-<li>featured-product.liquid</li>
-<li>theme.scss.liquid</li>
-<li>theme.js.liquid</li>
-<li>featured-image-text.liquid</li>
-<li>settings_schema.json</li>
-</ul>
-</div><div style="" class="accordions-head"><i class="accordion-icons left accordion-plus fa fa-chevron-up"></i><i class="accordion-icons left accordion-minus fa fa-arrow-down fa-chevron-down"></i><span class="accordions-head-title">[Mise à jour du 20-10-2017]</span></div><div class="accordion-content"><h2>LISTE DES MODIFICATIONS ET AMÉLIORATIONS</h2>
-<ul>
-<li>Avoir le % d’économie en plus du économiser €x… afin de donner quelque chose de ce style: Economisez €5 (-50%)</li>
-<li>Pouvoir choisir si on affiche le % ou non (fiche produit + fiche mise en avant de la page d’accueil)</li>
-<li>Possibilité de mettre une section vidéo sur la page d’accueil avec choix de la taille et de l’autoplay</li>
-<li>Amélioration des tailles de blocs lorsque l’app product reviews est installée</li>
-<li>Suppression des avis sur la page d’accueil d’un produit mis en avant sauf sur le mono produit pour éviter la surcharge d’éléments</li>
-<li>Amélioration des marges sur la version mono-produit</li>
-<li>Rajout dans le compteur de visites de 2 options pour prendre la main sur le nombre de visiteurs: visiteurs minimum et maximum</li>
-</ul>
-<p><em><strong>Fichiers impactés:</strong>&nbsp;</em></p>
-<ul>
-<li>product-template.liquid</li>
-<li>featured-product.liquid</li>
-<li>theme.scss.liquid</li>
-<li>theme.js.liquid</li>
-<li>video.liquid</li>
-</ul>
-</div></div>
-<p>&nbsp;</p>
-<div style="display:none;">
-<h2>Tutoriel de mise à jour</h2>
-<p><a class="btn btn-primary" href="https://www.youtube.com/watch?v=9SFgNAG7BF0&amp;t=25s" target="_blank">Voir le tuto en vidéo</a></p>
-<p>Rendez vous dans l’administration et cliquez sur&nbsp;<strong>Online store</strong></p>
-<p>Cliquez sur le bouton&nbsp;<strong>Upload theme </strong>et allez chercher votre nouvelle version du thème que vous avez reçu par mail et cliquez sur le bouton <strong>Upload</strong></p>
-<p>Attendez quelques secondes et avant de le publier nous allons récupérer la configuration de votre thème actuel afin de ne pas perdre vos données</p>
-<p>Cliquez sur le bouton <strong>Action</strong> de votre thème actuel (celui actif sur votre boutique) et cliquez sur <strong>Edit code</strong></p>
-<p>Dépliez le dossier <strong>config</strong> et cliquez sur le fichier: <strong>settings_data.json</strong></p>
-<p>Cliquez dans la zone&nbsp;et faites les touches <strong>ctrl + A</strong> pour sélectionner tout le code et faites <strong>Ctrl + C</strong> pour copier tout le contenu du fichier</p>
-<p>Rendez vous dans la nouvelle version du thème que vous allez mettre en ligne et retrouvez le même fichier:&nbsp;<strong>settings_data.json</strong></p>
-<p>Faites <strong>Ctrl + V</strong> pour coller votre ancienne config et votre paramétrage</p>
-<p>Cliquez sur le bouton Save</p>
-<p><em>La mise à jour est terminée ! il ne vous reste plus qu’a vérifier que tout est en ordre</em></p>
-<h2>Si vous souhaitez récupérer vos traductions</h2>
-<p>Rendez vous dans votre ancienne version du thème et copiez le contenu du fichier Locales -&gt; fr.json ! ensuite rendez vous dans votre nouvelle version du thème et remplacez le code, et voila vos trads sont de retour&nbsp;<span class="_47e3 _5mfr" title="émoticône wink"><img class="img" src="https://www.facebook.com/images/emoji.php/v9/f57/1/16/1f609.png" alt="" width="16" height="16"><span class="_7oe"><img draggable="false" class="emoji" alt="😉" src="http://s.w.org/images/core/emoji/72x72/1f609.png"></span></span></p>
-<p>Au moindre problème remettez votre ancienne version et consulter le support à cette adresse:&nbsp;<a href="http://www.speedfly-theme.eu/contact.php" target="_blank">http://www.speedfly-theme.eu/contact</a></p>
-</div>
-         
-      
-                            
-          </div>
-  </div> 
-</div>
-
-<div class="tab-int" id="tab-11">
-    <h2>FAQ</h2>
-
-    <script>
-  $( function() {
-    $( "#accordion" ).accordion({
-
-  animate: 0
-
-    });
-  } );
-  </script>                   
-           
-            <div id="accordion">
-<h3>Je n'ai pas reçu de mail avec les liens pour m'aider à utiliser Speedfly</h3>
-<div>
-  <p class="lead">Vous pouvez trouver ci-dessous les liens utiles reçu par mail</p>
-          <p class="lead">
-Guide d'utilisation: <a href="https://goo.gl/LP8Trj" target="_blank" >Lien </a><br />
-Ressources (images, codes, etc...):  <a href="https://goo.gl/rw468x" target="_blank" >Lien </a><br />
-Page de mises à jour:  <a href="https://goo.gl/1M6Y9A" target="_blank" >Lien </a><br />
-Le groupe Facebook dédié:  <a href="https://goo.gl/afKJec" target="_blank" >Lien </a><br />
-Chaîne Youtube:  <a href="https://goo.gl/YYPka1" target="_blank" >Lien </a></p>
-</div>
-   <h3>Je n'ai pas le mot de passe pour accèder à l'espace membre ou puis-je le trouver?</h3>
-  <div>
-    <p class="lead">Vous pouvez trouver votre mot de passe sur le mail d'achat du thème (vérifiez vos spams) ou me le demander en <a href="https://www.facebook.com/geoffrey.desfour" target="_blank">MP</a></p>
-
-  </div>
-   <h3>Je ne sais pas comment changer de version pour passer en classique</h3>
-  <div>
-     <p class="lead">Il vous suffit de vous rendre dans Customize -> General Settings -> choix du thème et décocher Version Deluxe</p>
-  </div>
-  <h3>Si je passe d'une version à l'autre (classique, deluxe ou mono) je vais perdre mes réglages?</h3>
-  <div>
-    <p class="lead">NON, vous ne perdrez rien et vous pouvez vous amuser à tester les 3 sans soucis</p>
-  </div>
-  <h3>Pourquoi lorsque j'active la version Mono-produit je n'ai plus rien sur la page d'accueil?</h3>
-  <div><p class="lead">Car toutes les zones sont automatiquement masquées afin de mettre en avant votre produit.<br />
-            Vous devez le rajouter en faisant: Customize -> Sections -> add section -> produit mise en avant et continuer le paramétrage</p></div>
-  <h3>Puis-je utiliser le thème sur d'autres boutiques?</h3>
-  <div> <p class="lead">OUI, la licence est unique mais vous pouvez l'utiliser sur 3 boutiques étant donné que c'est un 3 en 1<br />
-             Cependant l'assistance sera effective sur une seule boutique</p></div>
-   <h3>Je veux faire une boutique US je peux utiliser Speedfly?</h3>
-  <div> <p class="lead">Oui car même si l'interace est automatiquement mise en FR vous avez la main sur chaque zone de texte donc il vous sera facile de modifier ces textes en US</p>
-</div>
-   <h3>Je ne sais pas comment faire une mise à jour</h3>
-  <div> <p class="lead">Vous pouvez trouver la vidéo sur le Youtube dédiée: <a href="https://www.youtube.com/channel/UCVDbkjDwykhbYe9Xp8zrJ9A/videos" target="_blank">Voir les vidéos</a></p>
+      </div>
+      <div  class="tab-int" id="tab-4">
+         <h2>Liens utiles</h2>
+         <p>➨ Lien version d’essai gratuit pour Shopify: <a href="https://goo.gl/MqXTvu">https://goo.gl/MqXTvu </a></p>
+         <p>➨ Code d'accès aux pages privées: (vous l’avez reçu par mail) </p>
+         <p>➨ Comment faire une mise à jour: <a href="https://www.youtube.com/watch?v=9SFgNAG7BF0&t=2s">https://www.youtube.com/watch?v=9SFgNAG7BF0&t=2s</a></p>
+         <p>➨ Le groupe Facebook dédié: <a href="https://goo.gl/afKJec">https://goo.gl/afKJec</a> </p>
+         <p>➨ Chaîne Youtube: <a href="https://goo.gl/YYPka1">https://goo.gl/YYPka1</a></p>
+         <h3>Générateurs de : politique de retours, CGV, mentions légales et politique de remboursement </h3>
+         <p>➨ Mentions légales: <a href="https://www.subdelirium.com/generateur-de-mentions-legales">https://www.subdelirium.com/generateur-de-mentions-legales</a></p>
+         <p>➨ Politique de retour: <a href="https://fr.shopify.com/outils/generateur-de-politique">https://fr.shopify.com/outils/generateur-de-politique</a></p>
+         <p>➨ Politique de remboursement: <a href="https://fr.shopify.com/outils/generateur-de-politique/remboursement">https://fr.shopify.com/outils/generateur-de-politique/remboursement</a></p>
+         <p>➨ CGV: <a href="https://fr.shopify.com/outils/generateur-de-politique/conditions-generales-de-vente-et-d-utilisation">https://fr.shopify.com/outils/generateur-de-politique/conditions-generales-de-vente-et-d-utilisation</a></p>
+      </div>
+      <div  class="tab-int" id="tab-5">
+         <h2>Outils pratiques</h2>
+         <h3>Liens rapides vers vos produits</h3>
+         <ul>
+            <% @products.each do |product| %>
+            <li><%= link_to product.title, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %></li>
+            <% end %>
+         </ul>
+         <h3>Autres outils à venir...</h3>
+         <div style="display:none;">
+            <h3>Informations sur la boutique</h3>
+            <%= debug @shop %>
+         </div>
+      </div>
+      <div  class="tab-int" id="tab-6">
+         <h2>Support - Assistance</h2>
+         <div class="col-lg-12 text-center">
+            <div class="clearfix"></div>
+            <h3 class="section-heading">Quel est votre soucis ?</h3>
+            <h4>Pour les questions génériques et liées au thème merci de poster vos questions sur le groupe dédié</h4>
+            <p class="lead"><a href="https://www.facebook.com/groups/speedflytheme/" target="_blank" class="btn-1 btn-primary">Groupe Facebook</a></p>
+            <h4>Pour les questions plus confidentielles ou spécifiques merci de poser votre question en MP sur le Messenger de la page dédiée</h4>
+            <p class="lead"><a href="https://m.me/speedflytheme" target="_blank" class="btn-1 btn-primary">Tchat Messenger</a></p>
+            <p>Merci, <br>l'équipe Speedfly</p>
+            <p class="lead" style="display:none;">Veuillez utiliser ce formulaire si votre demande est spécifique en détaillant votre problème le plus clairement possible</p>
+         </div>
+      </div>
+      <div  class="tab-int" id="tab-7">
+         <h2>Apps conseillées</h2>
+         <h3>Système d'avis</h3>
+         <a href="https://apps.shopify.com/product-reviews" target="_blank">https://apps.shopify.com/product-reviews</a><br />
+         <a href="https://apps.shopify.com/loox" target="_blank" >https://apps.shopify.com/loox</a><br />
+         <a href="https://www.ryviu.com/shopify/install" target="_blank" >https://www.ryviu.com/shopify/install</a>
+         <h3>Système d'upsell et cross sell</h3>
+         <a href="https://apps.shopify.com/discounted-upsells" target="_blank" >https://apps.shopify.com/boost-sales</a>
+         <h3>Système récupération des ventes perdues et connexion messenger</h3>
+         <a href="https://apps.shopify.com/recart" target="_blank" >https://apps.shopify.com/recart</a>
+         <h3>Système de newsletter et récupération de mails</h3>
+         <a href="https://apps.shopify.com/mailchimp" target="_blank">https://apps.shopify.com/mailchimp</a><br />
+         <a href="https://apps.shopify.com/privy" target="_blank">https://apps.shopify.com/privy</a>
+         <h3>Convertisseur de devises</h3>
+         <a href="https://apps.shopify.com/doubly-currency-converter" target="_blank">https://apps.shopify.com/doubly-currency-converter</a>
+         <h3>Système d'automatisation des commandes en dropshpping</h3>
+         <a href="https://apps.shopify.com/oberlo" target="_blank">https://apps.shopify.com/oberlo</a>
+         <h3>Système pop up des articles vendus (réel et fake)</h3>
+         <a href="https://apps.shopify.com/sales-pop" target="_blank">https://apps.shopify.com/sales-pop</a>
+         <h3>Système de facturation</h3>
+         <a href="https://apps.shopify.com/conversio" target="_blank">https://apps.shopify.com/conversio</a>
+      </div>
+      <div  class="tab-int" id="tab-10">
+         <h2>Faire un don</h2>
+         <p>Si vous aimez Speedfly et mon travail et que vous souhaitez m'encourager à continuer n'hésitez pas à faire une donation en cliquant sur le bouton ci-dessous</p>
+         <p><a class="btn-1" href="https://www.tipeee.com/speedflytheme" target="_blank">Faire un don</a></p>
+         <p>Merci d'avance</p>
+      </div>
+      <div  class="tab-int" id="tab-8">
+         <div class="entry-content">
+            <h2>Listes des mises à jour</h2>
+            <script>jQuery(document).ready(function($){$("#accordions-1163.accordions").accordion({active: "",event: "click",collapsible: false,heightStyle: "content",animated: "swing",})})</script>
+            <div id="accordions-1163" class="accordions accordions-themes flat accordions-1163">
+               <div style="" class="accordions-head"><i class="accordion-icons left accordion-plus fa fa-chevron-up"></i><i class="accordion-icons left accordion-minus fa fa-arrow-down fa-chevron-down"></i><span class="accordions-head-title">[Mise à jour du 08-05-2018]</span></div>
+               <div class="accordion-content">
+                  <ul>
+                     <li>Fonctionnalité: Création d'un module pour pouvoir mettre des articles du blog sur la page d'accueil</li>
+                     <li>Fonctionnalité: Rajout d'une case à cocher sur le panier avec d'accepter les CGV</li>
+                     <li>Fonctionnalité: Création d'une application intégrée de gestion du RGPD sur formulaire et newsletter</li>
+                     <li>Fonctionnalités : rajout de 2 type de compte à rebours - Mémorisation du temps resté sur le site (cookies) + date butoir</li>
+                     <li>Amélioration: Stock fictif bloqué à 2</li>
+                     <li>Amélioration: rajout des jours pour le compte à rebours</li>
+                     <li>Amélioration: pourvoir arrondir les images des vignettes</li>
+                     <li>Amélioration: pouvoir supprimer l'économie gagnée mais laisser le %</li>
+                     <li>Amélioration: Le bouton continuer mes achats revient désormais sur la page précédente</li>
+                     <li>Option: Pouvoir afficher l'image sur les articles de blog</li>
+                     <li>Option: Rajout d'un champ de texte dans la colonne de droite des articles</li>
+                     <li>Option: Pouvoir mettre une image dans le header</li>
+                     <li>Option: Pouvoir mettre une image dans le footer</li>
+                     <li>Option: Pouvoir mettre une vidéo interne dans le module vidéo de la page d'accueil</li>
+                     <li>Option: pourvoir choisir l'icone du acheter maintenant</li>
+                     <li>Option: Pouvoir centrer le menu sur le header classique</li>
+                     <li>Amélioration: Déplacement de la pastille épuisé au centre de l'image afin d'éviter d'avoir la pastille Promo au même endroit</li>
+                     <li>Amélioration: Optimisation du RWD</li>
+                     <li>Optimisation de l'ergonomie</li>
+                     <li>Optimisation des fichiers pour gagner en performance</li>
+                     <li>Ménage dans les fichiers</li>
+                  </ul>
+               </div>
+               <div style="" class="accordions-head"><i class="accordion-icons left accordion-plus fa fa-chevron-up"></i><i class="accordion-icons left accordion-minus fa fa-arrow-down fa-chevron-down"></i><span class="accordions-head-title">[Mise à jour du 03-04-2018]</span></div>
+               <div class="accordion-content">
+                  <ul>
+                     <li>Fonctionnalité: Création d'un système de navigation entre les produits d'une collection avec des flèches (produit suivant, produit précédent)</li>
+                     <li>Fonctionnalité: Création d'un système d'information du contenu du panier au survol du bouton Panier</li>
+                     <li>Amélioration: Début de l'ajout des effets et options sur le carrousel</li>
+                     <li>Option: Ajout de 2 designs supplémentaires du compte à rebours</li>
+                     <li>Amélioration: possibilité de changer la couleur du compteur de visites et de la barre de stock</li>
+                     <li>Options: Rajout d'une option code promo au niveau du panier</li>
+                     <li>Options: Rajout d'options pour le moteur de recherche auto-complete + gestion des couleurs</li>
+                     <li>Améliorations: possibilité de mettre + de 2 mises en avant sur page d'accueil</li>
+                     <li>Amélioration: Correction des vidéos sur la fiche produit. elles ne prendront plus tout l'espace disponible</li>
+                     <li>Amélioration: possibilité de mettre le titre et prix sur les vignettes de la page d'accueil</li>
+                     <li>Option: masquer ou afficher les avis sur un produit de la page d'accueil (version mono)</li>
+                     <li>Option: pouvoir masquer le bouton voir le produit</li>
+                     <li>Option: Ajout d'une case à cocher pour pouvoir supprimer le 2ème formulaire sur une page produit</li>
+                     <li>Option: Dissocier la couleur des titres du texte du footer</li>
+                     <li>Option: Choix de la taille du bouton acheter maintenant sur PC</li>
+                     <li>Option: Choix de la limite des titres des produits sur les vignettes</li>
+                     <li>Amélioration: grosse optimisation des fichiers pour une meilleure organisation</li>
+                     <li>Amélioration: Optimisation du RWD</li>
+                     <li>Optimisation de l'ergonomie</li>
+                     <li>Optimisation des fichiers pour gagner en performance</li>
+                     <li>Ménage dans les fichiers</li>
+                  </ul>
+               </div>
+               <div style="" class="accordions-head"><i class="accordion-icons left accordion-plus fa fa-chevron-up"></i><i class="accordion-icons left accordion-minus fa fa-arrow-down fa-chevron-down"></i><span class="accordions-head-title">[Mise à jour du 06-03-2018]</span></div>
+               <div class="accordion-content">
+                  <ul>
+                     <li>Fonctionnalité: Rajout d'un système de panier en pop up (modal)</li>
+                     <li>Fonctionnalité: Rajout d'une app intégrée de bandeau eu cookies</li>
+                     <li>Amélioration: Moteur de recherche autocomplete afin d'afficher à la volée les résultats</li>
+                     <li>Amélioration: couleur des onglets de tabulation administrables + dissociation des couleurs titres et prix</li>
+                     <li>Option: Pouvoir mettre le prix en bas de page</li>
+                     <li>Option: Rajout d'une option pour rendre la zone du carrousel cliquable</li>
+                     <li>Option: Pouvoir center le menu sur le header classique de la version Deluxe</li>
+                     <li>Option: Rajout d'un 3ème et 4ème headers</li>
+                     <li>Option: Prise en charge du nombre de stock disponible</li>
+                     <li>Option: administration de la couleur du champ Newsletter</li>
+                     <li>Amélioration: Rajout du prix barré au niveau du panier</li>
+                     <li>Amélioration: Couleur flèches des carrousels administrables</li>
+                     <li>Amélioration: Pourvoir mettre uniquement le bouton sur le carrousel</li>
+                     <li>Amélioration: Administration des textes de l'upsell pour les traductions</li>
+                     <li>Amélioration: Pastille promo automatiquement rajoutée sur les articles des vignettes</li>
+                     <li>Amélioration: Affichage du Economisez au survol sur la version classique et vignettes classiques du deluxe</li>
+                     <li>Amélioration: Ajouter image de sécurité paiement sur le panier</li>
+                     <li>Amélioration: rajouter la traduction heures et minutes du timer</li>
+                     <li>Amélioration: Rajout d'un bouton continuer mes achats sur le panier</li>
+                     <li>Option: Rajout d'un emplacement de texte au dessus du moteur de recherche et panier</li>
+                     <li>Amélioration: Optimisation du RWD</li>
+                     <li>Optimisation de l'ergonomie</li>
+                     <li>Optimisation des fichiers pour gagner en performance</li>
+                     <li>Ménage dans les fichiers</li>
+                  </ul>
+               </div>
+               <div style="" class="accordions-head"><i class="accordion-icons left accordion-plus fa fa-chevron-up"></i><i class="accordion-icons left accordion-minus fa fa-arrow-down fa-chevron-down"></i><span class="accordions-head-title">[Mise à jour du 08-02-2018]</span></div>
+               <div class="accordion-content">
+                  <p>Liste mise à jour 8 Février 2018</p>
+                  <ul>
+                     <li>Module : Création d'un système de jeu du gobelet pour gagner un code promo au niveau du panier</li>
+                     <li>
+                        Amélioration: Possibilité de mettre un temps au niveau du compte à rebours d'une promo pour chaque produit en modifiant une valeur du code à utiliser<br>
+                        Exemple :
+                        <div id="showcdtimer" data-heures="0" data-minutes="20"></div>
+                     </li>
+                     <li>Option: Afficher que le stock sans le compte à rebours ou inverssement</li>
+                     <li>Amélioration: Ajout d'une flèche pour revenir en haut du site</li>
+                     <li>Amélioration: Des titres des collections sur la version classique + rajout de 5 blocs max</li>
+                     <li>Amélioration: Pouvoir rajouter un texte au dessus de champ de newsletter dans le footer </li>
+                     <li>Amélioration: Pouvoir rajouter un texte entre le logo et le moteur de recherche afin de mettre une baseline + option centrer la zone </li>
+                     <li>Amélioration: Zone de logos de paiements modifiés avec les logos officiels</li>
+                     <li>Option: Choix entre 2 headers différents (classique 1 + minimaliste 1) afin d'arriver à un nombre de headers différents de 4 ou 6 versions</li>
+                     <li>Option: Possibilité de mettre les images sécurités et 4 bonnes raisons en bas de page</li>
+                     <li>Option: Réafficher toutes les zones masquées du mono produit pour la gestion avec la visibilité des sections (oeil)</li>
+                     <li>Option: Ajout d'une zone HTML personnalisé sous les quantités de la fiche produit pour y mettre un tableau de code promos ou autres</li>
+                     <li>Option: Supprimer les onglets pour ne garder que la description du produit</li>
+                     <li>Option: Choix de la couleur des petits boutons du slider</li>
+                     <li>Option: Rajouter option afficher économie sur mise en avant et collections</li>
+                     <li>Option: Rajouter option afficher les prix barrés sur mise en avant et collections</li>
+                     <li>Amélioration: Ajout de la gestion de la couleur des textes du carrousel afin de dissocier le titre et la baseline</li>
+                     <li>Amélioration: Plus de choix au niveau des couleurs des textes des boutons</li>
+                     <li>Amélioration: Amélioration du menu sur mobile</li>
+                     <li>Amélioration de l'upsell sur mobile (iphone)</li>
+                     <li>Amélioration: Optimisation du RWD</li>
+                     <li>Optimisation de l'ergonomie</li>
+                     <li>Optimisation des fichiers pour gagner en performance</li>
+                     <li>Ménage dans les fichiers</li>
+                  </ul>
+               </div>
+               <div style="" class="accordions-head"><i class="accordion-icons left accordion-plus fa fa-chevron-up"></i><i class="accordion-icons left accordion-minus fa fa-arrow-down fa-chevron-down"></i><span class="accordions-head-title">[Mise à jour du 09-01-2018]</span></div>
+               <div class="accordion-content">
+                  <p>Liste mise à jour 9 Janvier 2018</p>
+                  <ul>
+                     <li>Création d'un module: Système FAQ sur page d'accueil et gabari page</li>
+                     <li>Compatibilité APPS: amélioration de la compatibilité des apps en rajoutant des codes pré-instalés afin de garder vos apps lors du changement de version<br>
+                        Liste des apps: Product review, Loox, Ryviu, Recart, BETTER COUPON BOX - FREE EMAIL POPUPS, DISCOUNTED UPSELLS - CROSS SELL AND UPSELL
+                     </li>
+                     <li>Amélioration: Prise en charge d'un niveau supplémentaire de sous menu</li>
+                     <li>Option: possibilité de mettre des avis dans un onglet ou en bas de page</li>
+                     <li>Amélioration: recherche + panier plus réduit et champ recherche animé pour une meilleure ergonomie</li>
+                     <li>Option: Fleche de scroll du slider pour arriver au contenu sur la page d'accueil</li>
+                     <li>Option: Header - possibilité d'activer ou désactiver le menu fixé au scroll sur la version Deluxe</li>
+                     <li>Option: pouvoir masquer le moteur de recherche</li>
+                     <li>Option: Header adaptatif selon la taille de la zone</li>
+                     <li>Option: Possibilité de mettre une image de fond du site</li>
+                     <li>Option: Clic sur les images pour mettre à jour les variantes</li>
+                     <li>Option: Centrer badges de sécurité sur la fiche produit</li>
+                     <li>Amélioration: déplacement des Titres, prix et économie en dessous des images sur la page d'accueil au lieu de la superposition</li>
+                     <li>Amélioration: Suppression meilleures ventes des filtres</li>
+                     <li>Amélioration: uniformisation des produits dans les collections pour éviter le décalage du bouton acheter mnt</li>
+                     <li>Amélioration: Optimisation des espaces sur la page d'accueil du mono produit</li>
+                     <li>Amélioration: Optimisation du RWD</li>
+                     <li>Optimisation des fichiers pour gagner en performance</li>
+                     <li>Ménage dans les fichiers</li>
+                  </ul>
+               </div>
+               <div style="" class="accordions-head"><i class="accordion-icons left accordion-plus fa fa-chevron-up"></i><i class="accordion-icons left accordion-minus fa fa-arrow-down fa-chevron-down"></i><span class="accordions-head-title">[Mise à jour du 04-12-2017]</span></div>
+               <div class="accordion-content">
+                  <h2>Liste mise à jour 4 Décembre 2017</h2>
+                  <ul>
+                     <li>- Création d'un module de carrousel évolué avec double système de navigation par vignettes et images principales pour les images des fiches produit</li>
+                     <li>- Rendre administrable le fond du texte image et texte de la page d'accueil</li>
+                     <li>- Couleur de fond du header administrable</li>
+                     <li>- Les couleurs deu carrousel sont désormais déplacées dans les settings génériques -&gt; couleurs</li>
+                     <li>- Amélioration de la gestion des couleurs des zones sur la page d'accueil</li>
+                     <li>- Donner la main sur la couleur de la zone économisez...</li>
+                     <li>- Rajouter une zone de texte (introduction) pour repprendre la main sur le texte des mises en avant</li>
+                     <li>- Correction du bug des chiffres sur le compteur de visites</li>
+                     <li>- Mettre système de filtres des collections en haut des vignettes au lieu d'un format colonne</li>
+                     <li>- Optimisation du balisage SEO sur la page d'accueil</li>
+                     <li>- Réduire taille des titres des vignettes sur V2 Deluxe et optimisation de son affichage</li>
+                     <li>- Correction zoom vignettes au dessus du header</li>
+                     <li>- Optimisation de l'espace sur le produit mis en avant</li>
+                     <li>- Panier: Grossissement du bouton passer à la caisse</li>
+                     <li>- Mise en avant produit: Ajout d'une option pour mettre un espace avant le titre</li>
+                     <li>- Amélioration des zones libre sur Tablette et mobile</li>
+                     <li>- Rajout d'une option pour modifier la couleur du bouton en savoir plus du slider</li>
+                     <li>- Header Lien compte - connexion: Choix dans l'administration de son affichage</li>
+                     <li>- Diminution de la taille des textes du carousel de la page d'accueil sur mobile</li>
+                     <li>- Mise en place d'une page de dissuasion lorsqu'une personne essaye de voir vos bests sellers</li>
+                     <li>- Changement du système d'affichage de l'upsell pour passer au clic sur le bouton du panier</li>
+                     <li>- Rajout d'un texte administrable dans le pop up d'upsell</li>
+                  </ul>
+               </div>
+               <div style="" class="accordions-head"><i class="accordion-icons left accordion-plus fa fa-chevron-up"></i><i class="accordion-icons left accordion-minus fa fa-arrow-down fa-chevron-down"></i><span class="accordions-head-title">[Mise à jour du 06-11-2017]</span></div>
+               <div class="accordion-content">
+                  <h2>Liste mise à jour 6 Novembre 2017</h2>
+                  <ul>
+                     <li>Rajout d'une option pour passer du bouton "acheter maintenant" au checkout sans passer par l'étape panier</li>
+                     <li>Ajout d'un bouton ajouter au panier dans les collections et vues listing et vignettes</li>
+                     <li>Création d'un module d'upsell permettant de proposer jusqu'à 4 produits en cliquant sur le bouton acheter (upssell génériques peu importe le produit)</li>
+                     <li>Option bouton acheter vibrant</li>
+                     <li>Correction hauteur du header lorsque connexion et créer compte est affiché</li>
+                     <li>Création d'un fichier de surcharge CSS et JS afin de mettre vos codes personnels afin d'éviter la perte lors de mises à jour du thème</li>
+                     <li>Ajustement et amélioration du css et js pour une optimisation du site</li>
+                     <li>Ajustement des marges sur la version mono produit</li>
+                     <li>Correction d'un bug sur les varaintes au niveau du le 2ème formulaire en bas de page</li>
+                     <li>Correction slider pour les écran de + de 24 pouces</li>
+                     <li>Réorganisation des infos du produit et des couleurs dans l'administration afin de mieux s'y retrouver</li>
+                  </ul>
+                  <p><em><strong>Fichiers impactés:</strong>&nbsp;</em></p>
+                  <ul>
+                     <li>theme.liquid</li>
+                     <li>theme.scss.liquid</li>
+                     <li>product-template.liquid</li>
+                     <li>featured-image-text.liquid</li>
+                     <li>product-grid-item.liquid</li>
+                     <li>featured-product.liquid</li>
+                     <li>theme.js.liquid</li>
+                     <li>settings_schema.json</li>
+                     <li>surcharge.scss.liquid</li>
+                     <li>surcharge.js.liquid</li>
+                     <li>product-upsell.liquid</li>
+                  </ul>
+               </div>
+               <div style="" class="accordions-head"><i class="accordion-icons left accordion-plus fa fa-chevron-up"></i><i class="accordion-icons left accordion-minus fa fa-arrow-down fa-chevron-down"></i><span class="accordions-head-title"> [Mise à jour du 23-10-2017]</span></div>
+               <div class="accordion-content">
+                  <h2>LISTE DES MODIFICATIONS ET AMÉLIORATIONS</h2>
+                  <ul>
+                     <li>Menu: Possibilité de changer la couleur de fond et du texte du menu et sous menu !<br>
+                        (v1 + v2 uniquement sur la version tablette et mobile + v3 mono produit)
+                     </li>
+                     <li>Témoignage: Possibilité de choisir la couleur du texte et de la couleur des flèches (fond + couleur)</li>
+                     <li>Mise en avant d'un produit sur la page d'accueil: Disposition des zones optimisées</li>
+                     <li>Bouton panier sur mobile: Réduction de la taille et ajustage de l'interlignage<br>
+                        Compteur de visites: taille du nombre réduit sur mobile et tablette
+                     </li>
+                     <li>Footer: Couleur du texte dans le champ email administrable</li>
+                     <li>Header Lien compte - connexion: Choix dans l'administration de son affiche ou non</li>
+                     <li>Limitation automatique de la hauteur du logo sur la v2 deluxe afin d'éviter le débordement du header sur les pages intérieures</li>
+                  </ul>
+                  <p><em><strong>Fichiers impactés:</strong>&nbsp;</em></p>
+                  <ul>
+                     <li>product-template.liquid</li>
+                     <li>featured-product.liquid</li>
+                     <li>theme.scss.liquid</li>
+                     <li>theme.js.liquid</li>
+                     <li>featured-image-text.liquid</li>
+                     <li>settings_schema.json</li>
+                  </ul>
+               </div>
+               <div style="" class="accordions-head"><i class="accordion-icons left accordion-plus fa fa-chevron-up"></i><i class="accordion-icons left accordion-minus fa fa-arrow-down fa-chevron-down"></i><span class="accordions-head-title">[Mise à jour du 20-10-2017]</span></div>
+               <div class="accordion-content">
+                  <h2>LISTE DES MODIFICATIONS ET AMÉLIORATIONS</h2>
+                  <ul>
+                     <li>Avoir le % d’économie en plus du économiser €x… afin de donner quelque chose de ce style: Economisez €5 (-50%)</li>
+                     <li>Pouvoir choisir si on affiche le % ou non (fiche produit + fiche mise en avant de la page d’accueil)</li>
+                     <li>Possibilité de mettre une section vidéo sur la page d’accueil avec choix de la taille et de l’autoplay</li>
+                     <li>Amélioration des tailles de blocs lorsque l’app product reviews est installée</li>
+                     <li>Suppression des avis sur la page d’accueil d’un produit mis en avant sauf sur le mono produit pour éviter la surcharge d’éléments</li>
+                     <li>Amélioration des marges sur la version mono-produit</li>
+                     <li>Rajout dans le compteur de visites de 2 options pour prendre la main sur le nombre de visiteurs: visiteurs minimum et maximum</li>
+                  </ul>
+                  <p><em><strong>Fichiers impactés:</strong>&nbsp;</em></p>
+                  <ul>
+                     <li>product-template.liquid</li>
+                     <li>featured-product.liquid</li>
+                     <li>theme.scss.liquid</li>
+                     <li>theme.js.liquid</li>
+                     <li>video.liquid</li>
+                  </ul>
+               </div>
             </div>
+            <p>&nbsp;</p>
+            <div style="display:none;">
+               <h2>Tutoriel de mise à jour</h2>
+               <p><a class="btn btn-primary" href="https://www.youtube.com/watch?v=9SFgNAG7BF0&amp;t=25s" target="_blank">Voir le tuto en vidéo</a></p>
+               <p>Rendez vous dans l’administration et cliquez sur&nbsp;<strong>Online store</strong></p>
+               <p>Cliquez sur le bouton&nbsp;<strong>Upload theme </strong>et allez chercher votre nouvelle version du thème que vous avez reçu par mail et cliquez sur le bouton <strong>Upload</strong></p>
+               <p>Attendez quelques secondes et avant de le publier nous allons récupérer la configuration de votre thème actuel afin de ne pas perdre vos données</p>
+               <p>Cliquez sur le bouton <strong>Action</strong> de votre thème actuel (celui actif sur votre boutique) et cliquez sur <strong>Edit code</strong></p>
+               <p>Dépliez le dossier <strong>config</strong> et cliquez sur le fichier: <strong>settings_data.json</strong></p>
+               <p>Cliquez dans la zone&nbsp;et faites les touches <strong>ctrl + A</strong> pour sélectionner tout le code et faites <strong>Ctrl + C</strong> pour copier tout le contenu du fichier</p>
+               <p>Rendez vous dans la nouvelle version du thème que vous allez mettre en ligne et retrouvez le même fichier:&nbsp;<strong>settings_data.json</strong></p>
+               <p>Faites <strong>Ctrl + V</strong> pour coller votre ancienne config et votre paramétrage</p>
+               <p>Cliquez sur le bouton Save</p>
+               <p><em>La mise à jour est terminée ! il ne vous reste plus qu’a vérifier que tout est en ordre</em></p>
+               <h2>Si vous souhaitez récupérer vos traductions</h2>
+               <p>Rendez vous dans votre ancienne version du thème et copiez le contenu du fichier Locales -&gt; fr.json ! ensuite rendez vous dans votre nouvelle version du thème et remplacez le code, et voila vos trads sont de retour&nbsp;<span class="_47e3 _5mfr" title="émoticône wink"><img class="img" src="https://www.facebook.com/images/emoji.php/v9/f57/1/16/1f609.png" alt="" width="16" height="16"><span class="_7oe"><img draggable="false" class="emoji" alt="😉" src="http://s.w.org/images/core/emoji/72x72/1f609.png"></span></span></p>
+               <p>Au moindre problème remettez votre ancienne version et consulter le support à cette adresse:&nbsp;<a href="http://www.speedfly-theme.eu/contact.php" target="_blank">http://www.speedfly-theme.eu/contact</a></p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="tab-int" id="tab-11">
+      <h2>FAQ</h2>
+      <script>
+         $( function() {
+           $( "#accordion" ).accordion({
+         
+         animate: 0
+         
+           });
+         } );
+      </script>                   
+      <div id="accordion">
+         <h3>Je n'ai pas reçu de mail avec les liens pour m'aider à utiliser Speedfly</h3>
+         <div>
+            <p class="lead">Vous pouvez trouver ci-dessous les liens utiles reçu par mail</p>
+            <p class="lead">
+               Guide d'utilisation: <a href="https://goo.gl/LP8Trj" target="_blank" >Lien </a><br />
+               Ressources (images, codes, etc...):  <a href="https://goo.gl/rw468x" target="_blank" >Lien </a><br />
+               Page de mises à jour:  <a href="https://goo.gl/1M6Y9A" target="_blank" >Lien </a><br />
+               Le groupe Facebook dédié:  <a href="https://goo.gl/afKJec" target="_blank" >Lien </a><br />
+               Chaîne Youtube:  <a href="https://goo.gl/YYPka1" target="_blank" >Lien </a>
+            </p>
+         </div>
+         <h3>Je n'ai pas le mot de passe pour accèder à l'espace membre ou puis-je le trouver?</h3>
+         <div>
+            <p class="lead">Vous pouvez trouver votre mot de passe sur le mail d'achat du thème (vérifiez vos spams) ou me le demander en <a href="https://www.facebook.com/geoffrey.desfour" target="_blank">MP</a></p>
+         </div>
+         <h3>Je ne sais pas comment changer de version pour passer en classique</h3>
+         <div>
+            <p class="lead">Il vous suffit de vous rendre dans Customize -> General Settings -> choix du thème et décocher Version Deluxe</p>
+         </div>
+         <h3>Si je passe d'une version à l'autre (classique, deluxe ou mono) je vais perdre mes réglages?</h3>
+         <div>
+            <p class="lead">NON, vous ne perdrez rien et vous pouvez vous amuser à tester les 3 sans soucis</p>
+         </div>
+         <h3>Pourquoi lorsque j'active la version Mono-produit je n'ai plus rien sur la page d'accueil?</h3>
+         <div>
+            <p class="lead">Car toutes les zones sont automatiquement masquées afin de mettre en avant votre produit.<br />
+               Vous devez le rajouter en faisant: Customize -> Sections -> add section -> produit mise en avant et continuer le paramétrage
+            </p>
+         </div>
+         <h3>Puis-je utiliser le thème sur d'autres boutiques?</h3>
+         <div>
+            <p class="lead">OUI, la licence est unique mais vous pouvez l'utiliser sur 3 boutiques étant donné que c'est un 3 en 1<br />
+               Cependant l'assistance sera effective sur une seule boutique
+            </p>
+         </div>
+         <h3>Je veux faire une boutique US je peux utiliser Speedfly?</h3>
+         <div>
+            <p class="lead">Oui car même si l'interace est automatiquement mise en FR vous avez la main sur chaque zone de texte donc il vous sera facile de modifier ces textes en US</p>
+         </div>
+         <h3>Je ne sais pas comment faire une mise à jour</h3>
+         <div>
+            <p class="lead">Vous pouvez trouver la vidéo sur le Youtube dédiée: <a href="https://www.youtube.com/channel/UCVDbkjDwykhbYe9Xp8zrJ9A/videos" target="_blank">Voir les vidéos</a></p>
+         </div>
+         <h3>J'ai une erreur lors de la mise à jour</h3>
+         <div>
+            <p class="lead">La mise à jour se fait d'une version de Speedfly à une autre et non pas d'un autre thème vers Speedfly.<br />
+               Si vous rencontrez un problème merci d'utliser ce lien: <a href="/contact.php">Assistance</a> 
+            </p>
+         </div>
+         <h3>Peut-on avoir un panier en modal sans se rendre directement sur la page du panier?</h3>
+         <div>
+            <p class="lead">Oui à partir de la version 1.07 vous avez la possibilité de choisir un panier de type modal</p>
+         </div>
+         <h3>Peut-on modifier le Acheter maintenant par ajouter au panier?</h3>
+         <div>
+            <p class="lead">Oui il suffit de modifier les traductions dans online theme - actions - edit language - rechercher acheter maintenant et modifier à votre convenance</p>
+         </div>
+         <h3>J'ai activé le compteur de visites entre 10-20 mais il monte jusqu’à plus de 100 visiteurs ?</h3>
+         <div>
+            <p class="lead">C'est normal entre 10 et 30 l'algorythme ca choisir de commencer entre ces 2 valeurs ensuite d'incrémenter et de 
+               décrémenter de 2 à 3 toutes les 10s afin de donner la sensation de trafic sur la page. si vous arrivez jusqu'à 100 c'est que le visiteur est resté + de 10mn ce qui est peu probable
+            </p>
+         </div>
+         <h3>Quel est la taille recommandée pour les images produits?</h3>
+         <div>
+            <p class="lead">Un format carré est conseillé avec 450 sur 450 sans zoom et 800 sur 800 max avec zoom</p>
+         </div>
+         <h3>Je voudrais mettre le € à droite du prix mais ca ne marche pas</h3>
+         <div>
+            <p class="lead">Rendez vous dans settings - general et cliquez sur change formating et renseignez les champs comme sur l'image ci-dessous:</p>
+            <img src="/img/devises.jpg" alt="" />
+         </div>
+         <h3>Je souhaites garder mes traductions et mes codes personnalisés lors d'une mise à jour</h3>
+         <div>
+            <p class="lead">Oui vous pouvez en suivante le tuto vidéo suivant: <a href="https://www.youtube.com/watch?v=3MXtk9bwG0o" target="_blank">https://www.youtube.com/watch?v=3MXtk9bwG0o</a></p>
+         </div>
+         <h3>Je souhaite créer une boutique anglophone, est-ce possible avec speedfly?</h3>
+         <div>
+            <p class="lead">Oui car tous les textes pré-installés en Français sont administrables et modifiables, vous avez également des fichiers de traductions des en différentes langues sur la page Ressources</p>
+         </div>
+         <h3>Est-il possible avec l'upsells du thème de faire un upsell différent par produit?</h3>
+         <div>
+            <p class="lead">Non car un thème ne peut proposer qu'un système générique. seuls les apps peuvent disposer des droits nécessaires pour faire de la contextualisation</p>
+         </div>
+         <h3>Mon menu n'apparait pas sur Mobile</h3>
+         <div>
+            <p class="lead">Vérifiez que la couleur de fond du menu n'est pas le même que la couleur du texte du menu</p>
+         </div>
+         <h3>J'ai mis 2 produits en avant sur la page d'accueil mais ca bug au niveau des descriptions et du compte à rebours</h3>
+         <div>
+            <p class="lead">Le compte à rebours ne peut être mis que sur un seul produit de la page d'accueil, pour les descriptif il faut reprendre la dessus en utilisant le champs dédié à cet effet</p>
+         </div>
+         <h3>Comment créer des sous-menus sur Speedfly</h3>
+         <div>
+            <p class="lead">C'est très simple vous pouvez consulter cette vidéo explicative: <a href="https://www.youtube.com/watch?v=NvrSTMtm9Iw" target="_blank">https://www.youtube.com/watch?v=NvrSTMtm9Iw</a></p>
+         </div>
+         <h3>Mes étoiles ne s'affichent pas sous le titre des produits</h3>
+         <div>
+            <p class="lead">Si vous utilisez une application autre que product-review les étoiles ne sont disponibles que dans une version payante des application en question (alireview, ryviu, loox etc...)</p>
+         </div>
+         <h3>J'ai un rectangle vide de couleur sur les produits recommandés comment corriger le problème?</h3>
+         <div>
+            <p class="lead">Vous avez sans doute une version obsolète de la 1.07. vous devez donc vous rendre dans: online store - actions - edit code - assets - surcharge.scss.liquid et copier/coller le code ci-dessous: <br />
+            <pre>.cont-related .badge-promo { display:none; }
 
- <h3>J'ai une erreur lors de la mise à jour</h3>
-  <div> <p class="lead">La mise à jour se fait d'une version de Speedfly à une autre et non pas d'un autre thème vers Speedfly.<br />
-            Si vous rencontrez un problème merci d'utliser ce lien: <a href="/contact.php">Assistance</a> </p>
-</div>
-
- <h3>Peut-on avoir un panier en modal sans se rendre directement sur la page du panier?</h3>
-  <div><p class="lead">Oui à partir de la version 1.07 vous avez la possibilité de choisir un panier de type modal</p>
-  </div>
-
-
- <h3>Peut-on modifier le Acheter maintenant par ajouter au panier?</h3>
-  <div><p class="lead">Oui il suffit de modifier les traductions dans online theme - actions - edit language - rechercher acheter maintenant et modifier à votre convenance</p></div>
-
- <h3>J'ai activé le compteur de visites entre 10-20 mais il monte jusqu’à plus de 100 visiteurs ?</h3>
-  <div><p class="lead">C'est normal entre 10 et 30 l'algorythme ca choisir de commencer entre ces 2 valeurs ensuite d'incrémenter et de 
-  décrémenter de 2 à 3 toutes les 10s afin de donner la sensation de trafic sur la page. si vous arrivez jusqu'à 100 c'est que le visiteur est resté + de 10mn ce qui est peu probable</p></div>
-
-  <h3>Quel est la taille recommandée pour les images produits?</h3>
-  <div><p class="lead">Un format carré est conseillé avec 450 sur 450 sans zoom et 800 sur 800 max avec zoom</p></div>
-   <h3>Je voudrais mettre le € à droite du prix mais ca ne marche pas</h3>
-  <div><p class="lead">Rendez vous dans settings - general et cliquez sur change formating et renseignez les champs comme sur l'image ci-dessous:</p>
-  <img src="/img/devises.jpg" alt="" /></div>
-<h3>Je souhaites garder mes traductions et mes codes personnalisés lors d'une mise à jour</h3>
-  <div><p class="lead">Oui vous pouvez en suivante le tuto vidéo suivant: <a href="https://www.youtube.com/watch?v=3MXtk9bwG0o" target="_blank">https://www.youtube.com/watch?v=3MXtk9bwG0o</a></p></div>
-  
-  <h3>Je souhaite créer une boutique anglophone, est-ce possible avec speedfly?</h3>
-  <div><p class="lead">Oui car tous les textes pré-installés en Français sont administrables et modifiables, vous avez également des fichiers de traductions des en différentes langues sur la page Ressources</p></div>
-  
-
-<h3>Est-il possible avec l'upsells du thème de faire un upsell différent par produit?</h3>
-  <div><p class="lead">Non car un thème ne peut proposer qu'un système générique. seuls les apps peuvent disposer des droits nécessaires pour faire de la contextualisation</p></div>
-<h3>Mon menu n'apparait pas sur Mobile</h3>
-  <div><p class="lead">Vérifiez que la couleur de fond du menu n'est pas le même que la couleur du texte du menu</p></div>
-
-<h3>J'ai mis 2 produits en avant sur la page d'accueil mais ca bug au niveau des descriptions et du compte à rebours</h3>
-  <div><p class="lead">Le compte à rebours ne peut être mis que sur un seul produit de la page d'accueil, pour les descriptif il faut reprendre la dessus en utilisant le champs dédié à cet effet</p></div>
- <h3>Comment créer des sous-menus sur Speedfly</h3>
-  <div><p class="lead">C'est très simple vous pouvez consulter cette vidéo explicative: <a href="https://www.youtube.com/watch?v=NvrSTMtm9Iw" target="_blank">https://www.youtube.com/watch?v=NvrSTMtm9Iw</a></p></div>
-  <h3>Mes étoiles ne s'affichent pas sous le titre des produits</h3>
-  <div><p class="lead">Si vous utilisez une application autre que product-review les étoiles ne sont disponibles que dans une version payante des application en question (alireview, ryviu, loox etc...)</p></div>
-  <h3>J'ai un rectangle vide de couleur sur les produits recommandés comment corriger le problème?</h3>
-  <div><p class="lead">Vous avez sans doute une version obsolète de la 1.07. vous devez donc vous rendre dans: online store - actions - edit code - assets - surcharge.scss.liquid et copier/coller le code ci-dessous: <br />
-<pre>.cont-related .badge-promo { display:none; }
-  
-</pre>
-  </p></div>
-<h3>Mes avis ne s'affichent pas</h3>
-  <div><p class="lead">Vous devez vous rendre dans: online store - customize - theme setting - Applications et codes et dans avis et commentaires - cocher les cases désirées<br /> Ensuite si cela ne fonctionne tjs pas, cochez les cases de débogage de l'application installée</p></div>
-
-<h3>Les avis de Ryviu ne s'affiche plus</h3>
-  <div><p class="lead">Il suffit de vider les caches de l'app pour lui expliquer qu'un changement de thèmme a été fait. pour ce faire rendez vous dans Apps - Ryviu et cliquez sur Clear cache</p></div>
-<h3>J'ai un message d'erreur : translation missing....</h3>
-  <div><p class="lead">Si vous venez de faire la mise à jour de 1.06 vers 1.07 vous ne devez pas reprendre votre ancienne traduction (FR.json ou EN.json) comme stipulé dans la vidéo de mise à jour car un nouveau système de traductions vient d'être créé et n'existait donc pas dans votre ancienne version. le système ne peut donc les afficher correctement.<strong> Vous devez donc laisser le FR.json de la 1.07</strong></p></div>
-  <h3>J'ai effectué le paiement mais je n'ai pas reçu le mail ni le thème</h3>
-  <div><p class="lead"> Bonjour, votre paypal n'a pas de carte ou compte bancaire associé, ils doivent donc vérifier les informations avant de débiter votre compte, en général cela prend 7 à 10 jours. pendant ce laps de temps aucune action ne peut être effectuée (annulation, validation, envoi du fichier). Nous recommandons d'utiliser un autre compte ou d'attendre ce délai. une fois le paiement validé nous annuleront le premier paiement en attente.
-</p></div>
- <h3>Mon icône sur le bouton ajouter au panier a disparu !</h3>
-  <div><p class="lead">Il vous suffit de vous rendre sur Customize - Theme Settings - Options du thème et dans icônes choisir parmis les différents modèles</p></div>
-  <h3>Autres</h3>
-  <div><p class="lead">Bientôt</p></div>
- 
-  
-
-</div>
-</div>
-
-
-<div style="display:none;">
-<h2>Informations</h2>
-
-<%= debug @shop %>
-
-<h2>Webhooks à tester</h2>     
-  
-<% if @webhooks.present? %>
-  <ul>
-    <% @webhooks.each do |webhook| %>
-      <li><%= webhook.topic %> : <%= webhook.address %></li>
-    <% end %>
-  </ul>
-<% else %>
-
-
-  <p>This app has not created any webhooks for this Shop. Add webhooks to your ShopifyApp initializer if you need webhooks</p>
-<% end %>
-
-</div>
-
-<div class="app-footer"><a href="https://www.speedfly-theme.eu/" target="_blank">Copyright &copy; speedfly-theme 2017. tous droits réservés</a> - <a target="_blank" href="https://www.tipeee.com/speedflytheme">M'encourager à continuer les mises à jour gratuites</a></div>
-
+            </pre>
+            </p>
+         </div>
+         <h3>Mes avis ne s'affichent pas</h3>
+         <div>
+            <p class="lead">Vous devez vous rendre dans: online store - customize - theme setting - Applications et codes et dans avis et commentaires - cocher les cases désirées<br /> Ensuite si cela ne fonctionne tjs pas, cochez les cases de débogage de l'application installée</p>
+         </div>
+         <h3>Les avis de Ryviu ne s'affiche plus</h3>
+         <div>
+            <p class="lead">Il suffit de vider les caches de l'app pour lui expliquer qu'un changement de thèmme a été fait. pour ce faire rendez vous dans Apps - Ryviu et cliquez sur Clear cache</p>
+         </div>
+         <h3>J'ai un message d'erreur : translation missing....</h3>
+         <div>
+            <p class="lead">Si vous venez de faire la mise à jour de 1.06 vers 1.07 vous ne devez pas reprendre votre ancienne traduction (FR.json ou EN.json) comme stipulé dans la vidéo de mise à jour car un nouveau système de traductions vient d'être créé et n'existait donc pas dans votre ancienne version. le système ne peut donc les afficher correctement.<strong> Vous devez donc laisser le FR.json de la 1.07</strong></p>
+         </div>
+         <h3>J'ai effectué le paiement mais je n'ai pas reçu le mail ni le thème</h3>
+         <div>
+            <p class="lead"> Bonjour, votre paypal n'a pas de carte ou compte bancaire associé, ils doivent donc vérifier les informations avant de débiter votre compte, en général cela prend 7 à 10 jours. pendant ce laps de temps aucune action ne peut être effectuée (annulation, validation, envoi du fichier). Nous recommandons d'utiliser un autre compte ou d'attendre ce délai. une fois le paiement validé nous annuleront le premier paiement en attente.</p>
+         </div>
+         <h3>Mon icône sur le bouton ajouter au panier a disparu !</h3>
+         <div>
+            <p class="lead">Il vous suffit de vous rendre sur Customize - Theme Settings - Options du thème et dans icônes choisir parmis les différents modèles</p>
+         </div>
+         <h3>Autres</h3>
+         <div>
+            <p class="lead">Bientôt</p>
+         </div>
+      </div>
+   </div>
+   <div style="display:none;">
+      <h2>Informations</h2>
+      <%= debug @shop %>
+      <h2>Webhooks à tester</h2>
+      <% if @webhooks.present? %>
+      <ul>
+         <% @webhooks.each do |webhook| %>
+         <li><%= webhook.topic %> : <%= webhook.address %></li>
+         <% end %>
+      </ul>
+      <% else %>
+      <p>This app has not created any webhooks for this Shop. Add webhooks to your ShopifyApp initializer if you need webhooks</p>
+      <% end %>
+   </div>
+   <div class="app-footer"><a href="https://www.speedfly-theme.eu/" target="_blank">Copyright &copy; speedfly-theme 2017. tous droits réservés</a> - <a target="_blank" href="https://www.tipeee.com/speedflytheme">M'encourager à continuer les mises à jour gratuites</a></div>
 </div>
