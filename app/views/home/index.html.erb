@@ -188,23 +188,14 @@
       <div class="tab-int" id="tab-12">
          <h2>Les Hacks de Dgeo</h2>
          <p>Bientôt disponible</p>
-         <script>
-         $( function() {
-           $( "#accordion2" ).accordion({
-         
-         animate: 0
-         
-           });
-         } );
-      </script>  
-
-     
-         <div id="accordion2">         
-         <h3>Test</h3>        
-         <div>
-            <p class="lead">Bientôt</p>
+         <script>jQuery(document).ready(function($){$("#accordions-2.accordions").accordion({active: "",event: "click",collapsible: false,heightStyle: "content",animated: "swing",})})</script>
+            <div id="accordions-2" class="accordions accordions-themes flat accordions-1163">
+               <div style="" class="accordions-head"><i class="accordion-icons left accordion-plus fa fa-chevron-up"></i><i class="accordion-icons left accordion-minus fa fa-arrow-down fa-chevron-down"></i><span class="accordions-head-title">Titre</span></div>
+               <div class="accordion-content">
+                 test
+               </div>
+            </div>
          </div>
-      </div>
       </div>
       <div class="tab-int" id="tab-1">
          <h2>Guide d'installation</h2>
