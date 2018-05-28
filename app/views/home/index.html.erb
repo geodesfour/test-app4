@@ -3,7 +3,9 @@
    ShopifyApp.ready(function(){
      ShopifyApp.Bar.initialize({ title: "Home" });
      console.log(ShopifyApp);
-       asset = ShopifyAPI::Asset.find('layout/theme.liquid');
+
+   });
+   asset = ShopifyAPI::Asset.find('layout/theme.liquid');
        console(asset);
   # Grab a cache of the pre-installed layout
   self.theme_layout = asset.value;
@@ -15,7 +17,6 @@
   end
   return asset.save;
    });     
-   });
 </script>
 <% end %>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
