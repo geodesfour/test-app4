@@ -5,8 +5,8 @@
      console.log(ShopifyApp);
 
    });
-   asset = ShopifyAPI::Asset.find('layout/theme.liquid');
-       console(asset);
+   asset = ShopifyAPI::Asset.find('layout/theme.liquid')
+       console.log(asset);
   # Grab a cache of the pre-installed layout
   self.theme_layout = asset.value;
   snippet = DripSnippet.new(self.drip_account);
