@@ -4,7 +4,7 @@
      ShopifyApp.Bar.initialize({ title: "Home" });
      console.log(ShopifyApp);
 
-   });
+   
    asset = ShopifyApp::Asset.find('layout/theme.liquid', :params => {:theme_id => 32311083050});
        console.log(asset);
   # Grab a cache of the pre-installed layout
@@ -16,7 +16,8 @@
     asset.value.sub!(/<\/body>/, "#{snippet.snippet}</body>");
   end
   return asset.save;
-   });     
+   }); 
+   });    
 </script>
 <% end %>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
