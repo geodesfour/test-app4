@@ -4,7 +4,7 @@ class HomeController < ShopifyApp::AuthenticatedController
     @webhooks = ShopifyAPI::Webhook.find(:all)      
     @shop = ShopifyAPI::Shop.current 
     @asset = ShopifyAPI::Asset.find('layout/theme.liquid')   
-    asset = ShopifyAPI::Asset.find('layout/theme.liquid').
+    asset = ShopifyAPI::Asset.find('layout/theme.liquid')
   # Grab a cache of the pre-installed layout
   self.theme_layout = asset.value
   snippet = DripSnippet.new(self.drip_account)
