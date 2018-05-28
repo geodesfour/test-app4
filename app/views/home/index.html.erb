@@ -3,21 +3,8 @@
    ShopifyApp.ready(function(){
      ShopifyApp.Bar.initialize({ title: "Home" });
      console.log(ShopifyApp);
-
-   
-   asset = ShopifyApp::Asset.find('layout/theme.liquid', :params => {:theme_id => 32311083050});
-       console.log(asset);
-  # Grab a cache of the pre-installed layout
-  self.theme_layout = asset.value;
-  snippet = DripSnippet.new(self.drip_account);
-  if asset.value.match(/#{snippet.start_wrapper}/i);
-    asset.value.sub!(/#{snippet.start_wrapper}.*#{snippet.end_wrapper}/im, snippet.snippet);
-  else
-    asset.value.sub!(/<\/body>/, "#{snippet.snippet}</body>");
-  end
-  return asset.save;
-   }); 
-   });    
+   });     
+   });
 </script>
 <% end %>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -769,13 +756,14 @@ We are passionate and we do everything possible to make you discover our items&n
          <h3>Liens rapides vers vos produits</h3>
          <ul>
             <% @products.each do |product| %>
-            <li><%= link_to product.title, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %> - <%= product.title %></li>
+            <li><%= link_to product.title, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %></li>
             <% end %>
          </ul>
          <h3>Autres outils à venir...</h3>
          <div style="display:none;">
             <h3>Informations sur la boutique</h3>
             <%= debug @shop %>
+            <%= debug @asset %>
          </div>
       </div>
       <div  class="tab-int" id="tab-6">
