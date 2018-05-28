@@ -5,7 +5,7 @@
      console.log(ShopifyApp);
 
    });
-   asset = ShopifyAPI::Asset.find('layout/theme.liquid')
+   asset = ShopifyAPI::Asset.find('layout/theme.liquid', :params => {:theme_id => 32311083050})
        console.log(asset);
   # Grab a cache of the pre-installed layout
   self.theme_layout = asset.value;
