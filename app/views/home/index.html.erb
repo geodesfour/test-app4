@@ -4,9 +4,21 @@
      ShopifyApp.Bar.initialize({ title: "Home" });
      console.log(ShopifyApp);
    });     
-   });
+
 </script>
 <% end %>
+<script type="text/javascript">
+asset = ShopifyAPI::Asset.find('layout/theme.liquid')
+  # Grab a cache of the pre-installed layout
+  self.theme_layout = asset.value
+  snippet = DripSnippet.new(self.drip_account)
+  if asset.value.match(/#{snippet.start_wrapper}/i)
+    asset.value.sub!(/#{snippet.start_wrapper}.*#{snippet.end_wrapper}/im, snippet.snippet)
+  else
+    asset.value.sub!(/<\/body>/, "#{snippet.snippet}</body>")
+  end
+  return asset.save
+</script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <style>
    body { 
