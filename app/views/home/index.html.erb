@@ -756,7 +756,7 @@ We are passionate and we do everything possible to make you discover our items&n
          <h3>Liens rapides vers vos produits</h3>
          <ul>
             <% @products.each do |product| %>
-            <li><%= link_to product.title, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %></li>
+            <li><%= link_to product.title, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %> - {{ product.published_status }}</li>
             <% end %>
          </ul>
          <h3>Autres outils à venir...</h3>
