@@ -1,9 +1,9 @@
 <% content_for :javascript do %>
 <script type="text/javascript">
    ShopifyApp.ready(function(){
-     ShopifyApp.Bar.initialize({ title: "Home" });
-     console.log(ShopifyApp);
-   });     
+     ShopifyApp.Bar.initialize({ title: "Home" });     
+   });  
+   ShopifyAPI::Asset.new(:key => 'assets/test-special.css', :theme_id => 32311083050)   
 
 </script>
 <% end %>
