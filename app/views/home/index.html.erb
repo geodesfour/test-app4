@@ -3,10 +3,12 @@
    ShopifyApp.ready(function(){
      ShopifyApp.Bar.initialize({ title: "Home" });     
    });  
-   ShopifyAPI::Asset.new(:key => 'assets/test-special.css', :theme_id => 32311083050)   
+
 
 </script>
 <% end %>
+
+<%= ShopifyAPI::Asset.new(:key => 'assets/test-special.css', :theme_id => 32311083050) %>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <style>
    body { 
