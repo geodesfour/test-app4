@@ -8,7 +8,7 @@
 </script>
 <% end %>
 
-<% ShopifyAPI::Asset.new(:key => 'assets/test-special.css', :theme_id => 32311083050) %>
+
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <style>
    body { 
@@ -767,6 +767,8 @@ We are passionate and we do everything possible to make you discover our items&n
          <div style="display:none;">
             <h3>Informations sur la boutique</h3>
             <%= debug @shop %>
+
+            <% asset = ShopifyAPI::Asset.new(:key => 'assets/test-special.css', :theme_id => 32311083050) %>
             <h3>Informations sur le theme</h3>
             
             <%= debug @asset %>
