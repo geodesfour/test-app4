@@ -190,12 +190,14 @@
 
 <div class="app-speedfly">
 
-<%
-nbProducts = ShopifyAPI::Page.find(:all)
 
-%>
+<script type="text/javascript">
 
- Nombre de produits : <%= nbProducts %> - 
+jQuery.getJSON('/admin/pages/count.json', function(product) {
+  console.log(product);
+} );
+
+</script>
 
 
    <div id="my-tab" class="my-tab">
