@@ -190,12 +190,13 @@
 
 <div class="app-speedfly">
 
- Nombre de produits : 
- <%
- nbProducts = ShopifyAPI::Product.find(:all).count()
+<%
+nbProducts = ShopifyAPI::Product.find(:all).count()
+nbOrders = ShopifyAPI::Order.find(:all).count()
+%>
 
- %>
- <%= nbProducts %>
+ Nombre de produits : <%= nbProducts %> - 
+ Nombre de commandes : <%= nbOrders %>
 
    <div id="my-tab" class="my-tab">
       <ul class="tabs">
