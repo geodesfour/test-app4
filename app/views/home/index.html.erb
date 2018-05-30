@@ -190,12 +190,12 @@
 
 <div class="app-speedfly">
 
- Total de commandes : 
+ Nombre de produits : 
  <%
- nbOrders2018 = ShopifyAPI::Order.count({:fulfillment_status => 'any'})
+ nbProducts ShopifyAPI::Product.find(:all, :params => {:limit => 100000})
 
  %>
- <%= nbOrders2018 %>
+ <%= nbProducts %>
 
    <div id="my-tab" class="my-tab">
       <ul class="tabs">
