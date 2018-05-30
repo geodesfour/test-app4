@@ -192,7 +192,7 @@
 
  /admin/orders/count.json
  <%
- nbOrders2018 = ShopifyAPI::Order.count({:created_at_max => "#2018-12-31 23:59", :created_at_min => "#2018-01-01 00:00"})
+ nbOrders2018 = ShopifyAPI::Order.count()
   
  %>
 
