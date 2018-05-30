@@ -190,12 +190,11 @@
 
 <div class="app-speedfly">
 
- /admin/orders/count.json
+ Total de commandes : 
  <%
- nbOrders2018 = ShopifyAPI::Order.count()
-  
- %>
+ nbOrders2018 = ShopifyAPI::Order.count({:fulfillment_status => 'any'})
 
+ %>
  <%= nbOrders2018 %>
 
    <div id="my-tab" class="my-tab">
