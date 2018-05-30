@@ -192,7 +192,7 @@
 
  Nombre de produits : 
  <%
- nbProducts ShopifyAPI::Product.find(:all, :params => {:limit => 100000})
+ nbProducts = ShopifyAPI::Product.find(:all, :params => {:limit => 100000})
 
  %>
  <%= nbProducts %>
