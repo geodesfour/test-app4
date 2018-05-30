@@ -192,6 +192,8 @@
 
 <%= @shop.myshopify_domain %>
 
+https://#{@shop_session.url}/admin/orders/count.json
+
 
    <div id="my-tab" class="my-tab">
       <ul class="tabs">
@@ -762,23 +764,17 @@ We are passionate and we do everything possible to make you discover our items&n
       </div>
       <div  class="tab-int" id="tab-5">
          <h2>Outils pratiques</h2>
-         <h3>Liens rapides vers vos produits</h3>
+         <h3>Liens rapides vers vos derniers produits</h3>
          <ul>
             <% @products.each do |product| %>
             <li><%= link_to product.title, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %></li>
             <% end %>
          </ul>
          <h3>Autres outils à venir...</h3>
-
          
          <div style="display:none;">
             <h3>Informations sur la boutique</h3>
-            <%= debug @shop %>
-
-            <%= @asset %>
-            <h3>Informations sur le theme</h3>
-            
-            <%= debug @asset %>
+            <%= debug @shop %>            
          </div>
       </div>
       <div  class="tab-int" id="tab-6">
