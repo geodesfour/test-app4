@@ -192,7 +192,7 @@
 
 <%
 nbProducts = ShopifyAPI::Product.find(:all).count()
-nbOrders = ShopifyAPI::Order.find(:all).count()
+nbOrders = ShopifyAPI::Order.count({:fulfillment_status => 'any', :created_at_min => '2017-12-30'})
 %>
 
  Nombre de produits : <%= nbProducts %> - 
