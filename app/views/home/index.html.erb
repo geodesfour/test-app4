@@ -263,6 +263,14 @@
                <div class="accordion-content">
                  <p><strong>Supprimer l'espace vide sous les titres des produits dans les collections</strong></p>
                  <pre>.template-collection .grid-uniform h3, .template-collection .grid-uniform .h3 { min-height: auto; }</pre>
+<p><strong>Supprimer l'espace vide sous les vignettes dans les collections en version mobile</strong></p>
+<pre>
+@media screen and (max-width: 768px) {
+.template-collection .grid-uniform .product-grid-item {
+   min-height: auto; 
+}
+}
+</pre>
                </div>
                <div class="accordions-head">
                <i class="accordion-icons left accordion-plus fa fa-chevron-up"></i>
@@ -281,6 +289,10 @@ background: #f0c14b !important;
 border-color: #a88734 #9c7e31 #846a29 !important;
 color: #111 !important;
 }
+</pre>
+<p><strong>Cacher les avis product reviews</strong></p>
+<pre>
+#shopify-product-reviews { display:none; }
 </pre>
                </div>
                <div class="accordions-head">
