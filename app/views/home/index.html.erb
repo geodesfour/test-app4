@@ -181,78 +181,69 @@
    color:#333 !important;
    }
    #password { border:1px solid #ddd; width:150px; padding:10px 15px; }
-   .popup 
-   {
-   background-color:#FFFFFF;
-   border:1px solid #999999;
-   cursor:default;
-   display:none;
-   margin-top: 15px;
-   position:absolute;
-   text-align:left;
-   width:400px;
-   z-index:50;
-   padding: 25px 25px 20px;
-   }
-   .popup a.selected {
-   background-color:#1F75CC;
-   color:white;
-   z-index:100;
-}
+
 </style>
 <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="//code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
 <script>$(document).ready(function(){$("ul.tabs").each(function(){var t,i,a=$(this).find("a");t=a.first().addClass("active"),i=$(t.attr("href")),a.not(":first").each(function(){$($(this).attr("href")).hide()}),$(this).find("a").click(function(a){return t.removeClass("active"),i.hide(),t=$(this),i=$($(this).attr("href")),t.addClass("active"),i.show(),!1})})});</script>
 
 <script type="text/javascript">
-   //Fonction utilisée pour fermer la popup et enlever la classe selected sur le lien
-function deselect(e) {
- $('.pop').slideFadeToggle(function()
- {
- e.removeClass('selected');
- }); 
-}
-$(function()
-{
- //Fonction appelée lorsque l'on clique sur le lien Afficher la fenêtre
- $('#afficherPopup').on('click', function()
- {
- if($(this).hasClass('selected'))
- {
- deselect($(this)); 
- }
- else
- {
- $(this).addClass('selected');
- $('.pop').slideFadeToggle();
- }
- return false;
- });
- //Fonction appelée lorsque l'on clique sur le lien Fermer la fenêtre
- $('.close').on('click', function()
- {
- deselect($('#afficherPopup'));
- return false;
- });
+   // jQuery extend functions for popup
+(function($) {
+  $.fn.openPopup = function( settings ) {
+    var elem = $(this);
+    // Establish our default settings
+    var settings = $.extend({
+      anim: 'fade'
+    }, settings);
+    elem.show();
+    elem.find('.popup-content').addClass(settings.anim+'In');
+  }
+  
+  $.fn.closePopup = function( settings ) {
+    var elem = $(this);
+    // Establish our default settings
+    var settings = $.extend({
+      anim: 'fade'
+    }, settings);
+    elem.find('.popup-content').removeClass(settings.anim+'In').addClass(settings.anim+'Out');
+    
+    setTimeout(function(){
+        elem.hide();
+        elem.find('.popup-content').removeClass(settings.anim+'Out')
+      }, 500);
+  }
+    
+}(jQuery));
+
+// Click functions for popup
+$('.open-popup').click(function(){
+  $('#'+$(this).data('id')).openPopup({
+    anim: (!$(this).attr('data-animation') || $(this).data('animation') == null) ? 'fade' : $(this).data('animation')
+  });
 });
-//Fonction d'animation de la fenêtre. Elle permet d'afficher ou de masquer la fenêtre
-$.fn.slideFadeToggle = function(easing, callback)
-{
- return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
-};
-$('#afficherPopup').on('click', function()
-{
- $(#popup).dialog();
-}
+$('.close-popup').click(function(){
+  $('#'+$(this).data('id')).closePopup({
+    anim: (!$(this).attr('data-animation') || $(this).data('animation') == null) ? 'fade' : $(this).data('animation')
+  });
+});
+
+// To open/close the popup at any functions call the below
+// $('#popup_default').openPopup();
+// $('#popup_default').closePopup();
+
 </script>
 
 <div class="app-speedfly">
-<div class=popup>
- <p>Ce message va être affiché dans la popup.</p>
- <p><a class=close href=/>Fermer la fenêtre</a></p>
+<a href="#" class="btn open-popup" data-id="popup_default">Default</a>
+<div id="popup_default" class="popup">
+  <div class="popup-overlay"></div>
+  <div class="popup-content">
+    <a href="#" class="close-popup" data-id="popup_default">&times;</a>
+    <h1>Popup 1</h1>
+    <p> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  </div>
 </div>
-
-
 
    <div id="my-tab" class="my-tab">
       <ul class="tabs">
