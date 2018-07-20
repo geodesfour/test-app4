@@ -1491,11 +1491,11 @@ require 'net/http'
 source = 'https://phonebibi.com/products.json'
 resp = Net::HTTP.get_response(URI.parse(source))
 data = resp.body
-result = JSON.parse(data.products)
+result = JSON.parse(data)
 
 %>
 
-<%= result %>
+<%= result["products"] %>
 
 
 
