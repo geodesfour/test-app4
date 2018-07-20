@@ -1495,14 +1495,8 @@ result = JSON.parse(data.products)
 
 %>
 
+<%= result %>
 
 
-<ul>
-  <% @result.each do |event| %>
-    <% event.each do |e, d| %>
-      <li><%=h e.id %> / <%=h d.id %></li>
-    <% end %>
-  <% end %>
-</ul>
 
 </div>
