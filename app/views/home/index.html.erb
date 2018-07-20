@@ -1495,8 +1495,14 @@ result = JSON.parse(data)
 
 %>
 
-<%= result["products"] %>
+<% products = result["products"] %>
 
 
+
+<ul>
+  <% products.each do |product1| %>
+  <li><%= product1["title"] %></li>
+  <% end %>
+</ul>
 
 </div>
