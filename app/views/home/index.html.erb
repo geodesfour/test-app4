@@ -1485,24 +1485,6 @@ We are passionate and we do everything possible to make you discover our items&n
    
    <div class="app-footer"><a href="https://www.speedfly-theme.eu/" target="_blank">Copyright &copy; speedfly-theme 2017. tous droits réservés</a> - <a href="https://www.speedfly-theme.eu/faire-un-don" target="_blank">Faire un DON</a> - <a target="_blank" href="https://www.leetchi.com/c/projet-speedfly">Participer à la cagnotte</a> - <a target="_blank" href="https://dgeodev.com/category/shopify/">Tutos Gratuits Shopify</a></div>
 
-<%
 
-require 'net/http'
-source = 'https://phonebibi.com/products.json'
-resp = Net::HTTP.get_response(URI.parse(source))
-data = resp.body
-result = JSON.parse(data)
-
-%>
-
-<% products = result["products"] %>
-
-
-
-<ul>
-  <% products.each do |product1| %>
-  <li><%= product1["title"] %></li>
-  <% end %>
-</ul>
 
 </div>
