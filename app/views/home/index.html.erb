@@ -256,6 +256,98 @@ cursor: pointer;
     border-radius: 50px;
     color: #fff !important;
 }
+
+.thumbnails {
+  width:100%;
+  clear:both;
+  overflow:hidden;
+  float: none;  
+  margin-bottom:35px;
+}
+.thumbnail {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  min-height:80px;
+  width:50%;
+  float:left;
+  margin:15px 0;
+  background: #555;
+  opacity:0.9;
+  padding:20px 25px;
+  line-height: 150px;
+  font-size:55px;
+  border:1px solid #e0610d;
+  
+}
+.thumbnail h2, .thumbnail i {
+  font-size: 18px;
+-webkit-transition: all 200ms ease-in;
+-webkit-transform: scale(0.8);
+-ms-transition: all 200ms ease-in;
+-ms-transform: scale(0.8);   
+-moz-transition: all 200ms ease-in;
+-moz-transform: scale(0.8);
+transition: all 200ms ease-in;
+transform: scale(0.8);
+}
+.thumbnail-1 {
+  float: left;
+
+}
+.thumbnail-2 {
+  float: right;
+}
+.div-active {
+  background:#ff6600;
+  opacity:1;
+  position: relative;
+  color: #fff;
+
+}
+.div-active:after {
+  width: 0; 
+  height: 0; 
+  content:"";
+  display:block;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  position: absolute;
+  bottom:-15px;
+  left:45%;
+  border-top: 15px solid #ff6600;
+}
+.thumbnail:hover {
+  color:#fff;
+  text-decoration: none;
+  
+}
+.thumbnail:hover h2, .div-active h2 {
+  
+  text-decoration: none;
+  -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.05);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.05);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.05);
+    transition: all 200ms ease-in;
+    transform: scale(1.05);
+}
+.thumbnail:hover i, .div-active i {
+  -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
+    margin-right:7px;
+}
+.div-active h2, .div-active:hover h2 {
+  color:#fff !important;
+}
 </style>
 <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="//code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
@@ -280,6 +372,29 @@ overlay.appendTo(document.body).remove();
 return false;
 });
 });*/
+
+$('#spy-product').show(0);  
+  $('#grow-hacking').hide(0);  
+  $('.spy-product').addClass('div-active');
+  $('.spy-product').click(function(e) {
+    e.preventDefault();
+      $('#spy-product').show(0);     
+      $('#grow-hacking').hide(0);
+      $('.spy-product').addClass('div-active');
+      $('.grow-hacking').removeClass('div-active');
+  });
+  $('.grow-hacking').click(function(e) {
+    e.preventDefault();
+      $('#grow-hacking').show(0);    
+      $('#spy-product').hide(0);
+      $('.spy-product').removeClass('div-active');
+      $('.grow-hacking').addClass('div-active');
+  });
+
+  
+  
+});
+
 </script>
 
 <div class='popup' style="display:none;">
@@ -328,6 +443,22 @@ La mise à jour de Speedfly 1.12 est désormais terminée !
 ----
 
 </div>
+
+<a href="#spy-product" class="thumbnail thumbnail-1 spy-product">
+<h2><i class='fa fa-eye'></i> <span>Element 1</span></h2>
+</a>
+
+<a href="#grow-hacking"  class="thumbnail thumbnail-2 grow-hacking">
+<h2><i class='fa fa-search'></i> <span>Element 2</span></h2>
+</a>
+
+<div id="spy-product">  
+1111
+</div>
+
+ <div id="grow-hacking">
+2222
+ </div>
 
    <div id="my-tab" class="my-tab">
       <ul class="tabs">
