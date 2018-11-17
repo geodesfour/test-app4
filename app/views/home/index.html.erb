@@ -1830,6 +1830,32 @@ We are passionate and we do everything possible to make you discover our items&n
       </div>      
       <div  class="tab-int" id="tab-b3">
          <h2>Codes pour Speedfunnel</h2>    
+
+<h3>Pixel Facebook pour le suivi des achats (purchase)</h3>
+<p>Vous devez installer ce code dans Settings - Checkout - Additional scripts </p>
+<p>Remplacez le: votre_id_facebook par l'identifiant de votre pixel (Attention a bien garder les ' ' de part et d'autre)</p>
+<pre>
+{% if first_time_accessed %}
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+// Insert Your Custom Audience Pixel ID below. 
+fbq('init', 'votre_id_facebook');
+fbq('track', 'PageView');
+</script>
+<!-- End Facebook Pixel Code -->
+<script>
+  fbq('track', 'Purchase', {
+    value: {{ total_price | money_without_currency | remove:',' }},
+    currency: '{{ shop.currency }}',
+  });
+</script>
+{% endif %}
+</pre>
 <h3>Textes + trusts badges à mettre dans un composant Code HTML</h3>
 <pre>
 &lt;i class="fa fa-lock"&gt;&lt;/i&gt; &lt;strong&gt;Paiement Sécurisé &lt;/strong&gt;&lt;span style="font-size: 16px;"&gt;&lt;i class="fa fa-cc-paypal"&gt;&lt;/i&gt; &lt;i class="fa fa-cc-mastercard"&gt;&lt;/i&gt; &lt;i class="fa fa-cc-visa"&gt;&lt;/i&gt; &lt;i class="fa fa-credit-card" aria-hidden="true"&gt;&lt;/i&gt; &lt;i class="fa fa-cc-amex" aria-hidden="true"&gt;&lt;/i&gt;
